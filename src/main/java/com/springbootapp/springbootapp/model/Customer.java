@@ -24,13 +24,13 @@ public class Customer {
     private String nif;
 
     @Column(name = "card_number")
-    private String cardNumber;
+    private Integer cardNumber;
 
     public Customer() {
 
     }
 
-    public Customer(Integer id, Integer idp, String firstName, String lastName, String nif, String cardNumber) {
+    public Customer(Integer id, Integer idp, String firstName, String lastName, String nif, Integer cardNumber) {
         this.id = id;
         this.idp = idp;
         this.firstName = firstName;
@@ -79,11 +79,11 @@ public class Customer {
         this.nif = nif;
     }
 
-    public String getCardNumber() {
+    public Integer getCardNumber() {
         return cardNumber;
     }
 
-    public void setCardNumber(String cardNumber) {
+    public void setCardNumber(Integer cardNumber) {
         this.cardNumber = cardNumber;
     }
 
