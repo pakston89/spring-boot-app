@@ -5,9 +5,9 @@ import java.util.List;
 
 public interface CustomerService {
 
-    public List<Customer> getAll();
+    public List<Customer> getAllCustomers();
 
-    public Customer getById(Integer id);
+    public Customer getCustomerById(Integer id);
 
     public void addCustomer(Customer customer);
 }

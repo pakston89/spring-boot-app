@@ -17,12 +17,12 @@ public class CustomerServiceImpl implements CustomerService{
     }
 
     @Override
-    public List<Customer> getAll() {
+    public List<Customer> getAllCustomers() {
         return customerRepository.getAll();
     }
 
     @Override
-    public Customer getById(Integer id) {
+    public Customer getCustomerById(Integer id) {
         return customerRepository.getById(id);
     }
 

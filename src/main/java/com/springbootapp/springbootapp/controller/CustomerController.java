@@ -24,14 +24,14 @@ public class CustomerController {
     }
 
     @GetMapping("/getAllCustomers")
-    public List<CustomerDto> getAll() {
-        return customerMapper.customersToCustomersDto(customerServiceImpl.getAll());
+    public List<CustomerDto> getAllCustomers() {
+        return customerMapper.customersToCustomersDto(customerServiceImpl.getAllCustomers());
     }
 
     @GetMapping("/getCustomerById")
     public CustomerDto getCustomerById(@Param("id") Integer id) {
         LoggerConstants.CustomerControllerLog.info("getCustomerById -- Params: " + id);
-        return customerMapper.customerToCustomerDto(customerServiceImpl.getById(id));
+        return customerMapper.customerToCustomerDto(customerServiceImpl.getCustomerById(id));
     }
 
     @PostMapping("/addCustomer")
