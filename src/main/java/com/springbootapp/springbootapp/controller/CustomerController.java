@@ -1,7 +1,9 @@
 package com.springbootapp.springbootapp.controller;
 
-import com.springbootapp.springbootapp.model.Customer;
+import com.springbootapp.springbootapp.dto.CustomerDto;
+import com.springbootapp.springbootapp.dto.CustomerMapper;
 import com.springbootapp.springbootapp.service.CustomerService;
+import com.springbootapp.springbootapp.util.LoggerConstants;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.query.Param;
 import org.springframework.web.bind.annotation.*;
@@ -11,25 +13,30 @@ import java.util.List;
 @RequestMapping("/customer")
 public class CustomerController {
 
-    private CustomerService customerServiceImpl;
+    private final CustomerService customerServiceImpl;
+
+    private final CustomerMapper customerMapper;
 
     @Autowired
-    public CustomerController(CustomerService customerServiceImpl) {
+    public CustomerController(CustomerService customerServiceImpl, CustomerMapper customerMapper) {
         this.customerServiceImpl = customerServiceImpl;
+        this.customerMapper = customerMapper;
     }
 
     @GetMapping("/getAllCustomers")
-    public List<Customer> getAll() {
-        return customerServiceImpl.getAll();
+    public List<CustomerDto> getAll() {
+        return customerMapper.customersToCustomersDto(customerServiceImpl.getAll());
     }
 
     @GetMapping("/getCustomerById")
-    public Customer getById(@Param("id") Integer id) {
-        return customerServiceImpl.getById(id);
+    public CustomerDto getCustomerById(@Param("id") Integer id) {
+        LoggerConstants.CustomerControllerLog.info("getCustomerById -- Params: " + id);
+        return customerMapper.customerToCustomerDto(customerServiceImpl.getById(id));
     }
 
     @PostMapping("/addCustomer")
-    public void addCustomer(@RequestBody Customer customer) {
-        customerServiceImpl.addCustomer(customer);
+    public void addCustomer(@RequestBody CustomerDto customerDto) {
+        LoggerConstants.CustomerControllerLog.info("getCustomerById -- Params: " + customerDto.toString());
+        customerServiceImpl.addCustomer(customerMapper.customerDtoToCustomer(customerDto));
     }
 }
