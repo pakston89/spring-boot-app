@@ -12,7 +12,7 @@ public class Customer {
     private Integer id;
 
     @Column(name = "idp")
-    private Integer idp;
+    private Long idp;
 
     @Column(name = "first_name")
     private String firstName;
@@ -24,13 +24,13 @@ public class Customer {
     private String nif;
 
     @Column(name = "card_number")
-    private Integer cardNumber;
+    private Long cardNumber;
 
     public Customer() {
 
     }
 
-    public Customer(Integer id, Integer idp, String firstName, String lastName, String nif, Integer cardNumber) {
+    public Customer(Integer id, Long idp, String firstName, String lastName, String nif, Long cardNumber) {
         this.id = id;
         this.idp = idp;
         this.firstName = firstName;
@@ -47,11 +47,11 @@ public class Customer {
         this.id = id;
     }
 
-    public Integer getIdp() {
+    public Long getIdp() {
         return idp;
     }
 
-    public void setIdp(Integer idp) {
+    public void setIdp(Long idp) {
         this.idp = idp;
     }
 
@@ -79,11 +79,11 @@ public class Customer {
         this.nif = nif;
     }
 
-    public Integer getCardNumber() {
+    public Long getCardNumber() {
         return cardNumber;
     }
 
-    public void setCardNumber(Integer cardNumber) {
+    public void setCardNumber(Long cardNumber) {
         this.cardNumber = cardNumber;
     }
 
