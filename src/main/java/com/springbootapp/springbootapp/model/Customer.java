@@ -1,5 +1,6 @@
 package com.springbootapp.springbootapp.model;
 
+import com.springbootapp.springbootapp.enums.CustomerStatus;
 import javax.persistence.*;
 
 @Entity
@@ -20,6 +21,9 @@ public class Customer {
     @Column(name = "last_name")
     private String lastName;
 
+    @Column(name = "status")
+    private CustomerStatus status;
+
     @Column(name = "nif")
     private String nif;
 
@@ -30,11 +34,12 @@ public class Customer {
 
     }
 
-    public Customer(Integer id, Long idp, String firstName, String lastName, String nif, Long cardNumber) {
+    public Customer(Integer id, Long idp, String firstName, String lastName, CustomerStatus status, String nif, Long cardNumber) {
         this.id = id;
         this.idp = idp;
         this.firstName = firstName;
         this.lastName = lastName;
+        this.status = status;
         this.nif = nif;
         this.cardNumber = cardNumber;
     }
@@ -71,6 +76,14 @@ public class Customer {
         this.lastName = lastName;
     }
 
+    public CustomerStatus getStatus() {
+        return status;
+    }
+
+    public void setStatus(CustomerStatus status) {
+        this.status = status;
+    }
+
     public String getNif() {
         return nif;
     }
@@ -94,8 +107,9 @@ public class Customer {
                 ", idp=" + idp +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
+                ", status=" + status +
                 ", nif='" + nif + '\'' +
-                ", cardNumber='" + cardNumber + '\'' +
+                ", cardNumber=" + cardNumber +
                 '}';
     }
 }
