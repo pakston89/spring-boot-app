@@ -25,6 +25,7 @@ public class CustomerController {
 
     @GetMapping("/getAllCustomers")
     public List<CustomerDto> getAllCustomers() {
+        LoggerConstants.CustomerControllerLog.info("getAllCustomers -- Params: " + "none");
         return customerMapper.customersToCustomersDto(customerServiceImpl.getAllCustomers());
     }
 
@@ -36,7 +37,7 @@ public class CustomerController {
 
     @PostMapping("/addCustomer")
     public void addCustomer(@RequestBody CustomerDto customerDto) {
-        LoggerConstants.CustomerControllerLog.info("getCustomerById -- Params: " + customerDto.toString());
+        LoggerConstants.CustomerControllerLog.info("addCustomer -- Params: " + customerDto.toString());
         customerServiceImpl.addCustomer(customerMapper.customerDtoToCustomer(customerDto));
     }
 }
