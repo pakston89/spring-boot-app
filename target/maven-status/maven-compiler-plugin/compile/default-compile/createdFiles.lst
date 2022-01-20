@@ -1,11 +1,12 @@
-com\springbootapp\springbootapp\SpringBootAppApplication.class
 com\springbootapp\springbootapp\service\CustomerServiceImpl.class
-com\springbootapp\springbootapp\controller\CustomerController.class
 com\springbootapp\springbootapp\enums\CustomerStatus.class
-com\springbootapp\springbootapp\repository\CustomerRepository.class
 com\springbootapp\springbootapp\util\LoggerConstants.class
 com\springbootapp\springbootapp\dto\CustomerDto.class
+com\springbootapp\springbootapp\service\CustomerService.class
+com\springbootapp\springbootapp\SpringBootAppApplication.class
+com\springbootapp\springbootapp\util\TableNames.class
+com\springbootapp\springbootapp\controller\CustomerController.class
+com\springbootapp\springbootapp\repository\CustomerRepository.class
 com\springbootapp\springbootapp\dto\CustomerMapperImpl.class
 com\springbootapp\springbootapp\model\Customer.class
 com\springbootapp\springbootapp\dto\CustomerMapper.class
-com\springbootapp\springbootapp\service\CustomerService.class
