@@ -1,9 +1,6 @@
 package com.springbootapp.springbootapp.dto;
 
 import com.springbootapp.springbootapp.enums.CustomerStatus;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
 
 public class CustomerDto {
 

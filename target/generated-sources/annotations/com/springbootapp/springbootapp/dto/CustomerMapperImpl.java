@@ -9,8 +9,8 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2022-01-17T18:45:44+0100",
-    comments = "version: 1.4.1.Final, compiler: javac, environment: Java 11.0.11 (Oracle Corporation)"
+    date = "2022-01-20T10:47:09+0100",
+    comments = "version: 1.4.1.Final, compiler: Eclipse JDT (IDE) 1.4.50.v20210914-1429, environment: Java 17.0.1 (Eclipse Adoptium)"
 )
 @Component
 public class CustomerMapperImpl implements CustomerMapper {
@@ -63,6 +63,14 @@ public class CustomerMapperImpl implements CustomerMapper {
         }
 
         Customer customer = new Customer();
+
+        customer.setId( customerDto.getId() );
+        customer.setIdp( customerDto.getIdp() );
+        customer.setFirstName( customerDto.getFirstName() );
+        customer.setLastName( customerDto.getLastName() );
+        customer.setStatus( customerDto.getStatus() );
+        customer.setNif( customerDto.getNif() );
+        customer.setCardNumber( customerDto.getCardNumber() );
 
         return customer;
     }
