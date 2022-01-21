@@ -1,6 +1,6 @@
-package com.springbootapp.springbootapp.dto;
+package com.springbootapp.dto;
 
-import com.springbootapp.springbootapp.model.Customer;
+import com.springbootapp.model.Customer;
 import org.mapstruct.Mapper;
 import java.util.List;
 

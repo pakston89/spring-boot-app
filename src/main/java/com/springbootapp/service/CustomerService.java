@@ -1,6 +1,6 @@
-package com.springbootapp.springbootapp.service;
+package com.springbootapp.service;
 
-import com.springbootapp.springbootapp.model.Customer;
+import com.springbootapp.model.Customer;
 import java.util.List;
 
 public interface CustomerService {

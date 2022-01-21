@@ -1,9 +1,9 @@
-package com.springbootapp.springbootapp.controller;
+package com.springbootapp.controller;
 
-import com.springbootapp.springbootapp.dto.CustomerDto;
-import com.springbootapp.springbootapp.dto.CustomerMapper;
-import com.springbootapp.springbootapp.service.CustomerService;
-import com.springbootapp.springbootapp.util.LoggerConstants;
+import com.springbootapp.dto.CustomerDto;
+import com.springbootapp.dto.CustomerMapper;
+import com.springbootapp.service.CustomerService;
+import com.springbootapp.util.LoggerConstants;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.query.Param;
 import org.springframework.web.bind.annotation.*;

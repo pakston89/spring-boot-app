@@ -1,6 +1,6 @@
-package com.springbootapp.springbootapp.dto;
+package com.springbootapp.dto;
 
-import com.springbootapp.springbootapp.enums.CustomerStatus;
+import com.springbootapp.enums.CustomerStatus;
 
 public class CustomerDto {
 
@@ -82,7 +82,5 @@ public class CustomerDto {
 
     public void setCardNumber(Long cardNumber) {
         this.cardNumber = cardNumber;
-    }
-
-    
+    }  
 }

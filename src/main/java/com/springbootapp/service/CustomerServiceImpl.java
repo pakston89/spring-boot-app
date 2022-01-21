@@ -1,7 +1,7 @@
-package com.springbootapp.springbootapp.service;
+package com.springbootapp.service;
 
-import com.springbootapp.springbootapp.model.Customer;
-import com.springbootapp.springbootapp.repository.CustomerRepository;
+import com.springbootapp.model.Customer;
+import com.springbootapp.repository.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;

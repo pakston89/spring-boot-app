@@ -1,4 +1,4 @@
-package com.springbootapp.springbootapp.util;
+package com.springbootapp.util;
 
 public class TableNames {
     

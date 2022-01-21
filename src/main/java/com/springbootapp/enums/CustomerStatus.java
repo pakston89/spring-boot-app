@@ -1,4 +1,4 @@
-package com.springbootapp.springbootapp.enums;
+package com.springbootapp.enums;
 
 public enum CustomerStatus {
     ACTIVE,

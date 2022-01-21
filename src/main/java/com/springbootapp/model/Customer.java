@@ -1,7 +1,7 @@
-package com.springbootapp.springbootapp.model;
+package com.springbootapp.model;
 
-import com.springbootapp.springbootapp.enums.CustomerStatus;
-import com.springbootapp.springbootapp.util.TableNames;
+import com.springbootapp.enums.CustomerStatus;
+import com.springbootapp.util.TableNames;
 
 import javax.persistence.*;
 

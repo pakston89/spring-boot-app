@@ -1,7 +1,7 @@
-package com.springbootapp.springbootapp.dto;
+package com.springbootapp.dto;
 
-import com.springbootapp.springbootapp.enums.CustomerStatus;
-import com.springbootapp.springbootapp.model.Customer;
+import com.springbootapp.enums.CustomerStatus;
+import com.springbootapp.model.Customer;
 import java.util.ArrayList;
 import java.util.List;
 import javax.annotation.processing.Generated;
@@ -9,8 +9,8 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2022-01-20T14:29:39+0100",
-    comments = "version: 1.4.1.Final, compiler: Eclipse JDT (IDE) 1.4.50.v20210914-1429, environment: Java 17.0.1 (Eclipse Adoptium)"
+    date = "2022-01-21T09:18:00+0100",
+    comments = "version: 1.4.1.Final, compiler: javac, environment: Java 11.0.11 (Oracle Corporation)"
 )
 @Component
 public class CustomerMapperImpl implements CustomerMapper {
@@ -21,21 +21,21 @@ public class CustomerMapperImpl implements CustomerMapper {
             return null;
         }
 
-        Long cardNumber = null;
-        String firstName = null;
         Integer id = null;
         Long idp = null;
+        String firstName = null;
         String lastName = null;
-        String nif = null;
         CustomerStatus status = null;
+        String nif = null;
+        Long cardNumber = null;
 
-        cardNumber = customer.getCardNumber();
-        firstName = customer.getFirstName();
         id = customer.getId();
         idp = customer.getIdp();
+        firstName = customer.getFirstName();
         lastName = customer.getLastName();
-        nif = customer.getNif();
         status = customer.getStatus();
+        nif = customer.getNif();
+        cardNumber = customer.getCardNumber();
 
         CustomerDto customerDto = new CustomerDto( id, idp, firstName, lastName, status, nif, cardNumber );
 
@@ -64,13 +64,13 @@ public class CustomerMapperImpl implements CustomerMapper {
 
         Customer customer = new Customer();
 
-        customer.setCardNumber( customerDto.getCardNumber() );
-        customer.setFirstName( customerDto.getFirstName() );
         customer.setId( customerDto.getId() );
         customer.setIdp( customerDto.getIdp() );
+        customer.setFirstName( customerDto.getFirstName() );
         customer.setLastName( customerDto.getLastName() );
-        customer.setNif( customerDto.getNif() );
         customer.setStatus( customerDto.getStatus() );
+        customer.setNif( customerDto.getNif() );
+        customer.setCardNumber( customerDto.getCardNumber() );
 
         return customer;
     }

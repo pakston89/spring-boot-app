@@ -1,6 +1,6 @@
-package com.springbootapp.springbootapp.util;
+package com.springbootapp.util;
 
-import com.springbootapp.springbootapp.controller.CustomerController;
+import com.springbootapp.controller.CustomerController;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
