@@ -9,19 +9,19 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
+/**
+ * The customer controller class.
+ * @author pause
+ */
 @RestController
 @RequestMapping("/customer")
 public class CustomerController {
 
-    private final CustomerService customerServiceImpl;
-
-    private final CustomerMapper customerMapper;
+    @Autowired
+    private CustomerService customerServiceImpl;
 
     @Autowired
-    public CustomerController(CustomerService customerServiceImpl, CustomerMapper customerMapper) {
-        this.customerServiceImpl = customerServiceImpl;
-        this.customerMapper = customerMapper;
-    }
+    private CustomerMapper customerMapper;
 
     @GetMapping("/getAllCustomers")
     public List<CustomerDto> getAllCustomers() {

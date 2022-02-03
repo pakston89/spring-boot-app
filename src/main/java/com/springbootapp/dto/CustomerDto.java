@@ -2,6 +2,10 @@ package com.springbootapp.dto;
 
 import com.springbootapp.enums.CustomerStatus;
 
+/**
+ * The Customer dto class.
+ * @author pause
+ */
 public class CustomerDto {
 
     private Integer id;

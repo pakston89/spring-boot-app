@@ -2,9 +2,12 @@ package com.springbootapp.model;
 
 import com.springbootapp.enums.CustomerStatus;
 import com.springbootapp.util.TableNames;
-
 import javax.persistence.*;
 
+/**
+ * The Customer entity class.
+ * @author pause
+ */
 @Entity
 @Table(name = TableNames.CUSTOMERS)
 public class Customer {

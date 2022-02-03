@@ -6,6 +6,10 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import java.util.List;
 
+/**
+ * The customer repository interface.
+ * @author pause
+ */
 public interface CustomerRepository extends JpaRepository<Customer, Integer> {
 
     @Query(value = "SELECT * FROM customers", nativeQuery = true)

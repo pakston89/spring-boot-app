@@ -6,15 +6,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;
 
+/**
+ * The Customer service implementation class.
+ * @author pause
+ */
 @Service
 public class CustomerServiceImpl implements CustomerService{
 
-    private final CustomerRepository customerRepository;
-
     @Autowired
-    public CustomerServiceImpl(CustomerRepository customerRepository) {
-        this.customerRepository = customerRepository;
-    }
+    private CustomerRepository customerRepository;
 
     @Override
     public List<Customer> getAllCustomers() {

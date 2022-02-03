@@ -3,6 +3,10 @@ package com.springbootapp.service;
 import com.springbootapp.model.Customer;
 import java.util.List;
 
+/**
+ * The Customer service interface.
+ * @author pause
+ */
 public interface CustomerService {
 
     public List<Customer> getAllCustomers();
