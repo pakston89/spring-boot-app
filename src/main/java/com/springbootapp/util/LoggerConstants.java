@@ -11,4 +11,5 @@ import org.apache.commons.logging.LogFactory;
 public class LoggerConstants {
 
     public static final Log CustomerControllerLog = LogFactory.getLog(CustomerController.class);
+    public static final Log ParkingControllerLog = LogFactory.getLog(ParkingControllerLog.class);
 }
