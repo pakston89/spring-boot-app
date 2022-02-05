@@ -1,6 +1,5 @@
 package com.springbootapp.dto;
 
-import com.springbootapp.enums.CustomerStatus;
 import com.springbootapp.model.Customer;
 import java.util.ArrayList;
 import java.util.List;
@@ -9,7 +8,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2022-02-05T18:44:04+0100",
+    date = "2022-02-05T19:41:17+0100",
     comments = "version: 1.4.1.Final, compiler: javac, environment: Java 11.0.11 (Oracle Corporation)"
 )
 @Component
@@ -21,23 +20,15 @@ public class CustomerMapperImpl implements CustomerMapper {
             return null;
         }
 
-        Integer id = null;
-        Long idp = null;
-        String firstName = null;
-        String lastName = null;
-        CustomerStatus status = null;
-        String nif = null;
-        Long cardNumber = null;
+        CustomerDto customerDto = new CustomerDto();
 
-        id = customer.getId();
-        idp = customer.getIdp();
-        firstName = customer.getFirstName();
-        lastName = customer.getLastName();
-        status = customer.getStatus();
-        nif = customer.getNif();
-        cardNumber = customer.getCardNumber();
-
-        CustomerDto customerDto = new CustomerDto( id, idp, firstName, lastName, status, nif, cardNumber );
+        customerDto.setId( customer.getId() );
+        customerDto.setIdp( customer.getIdp() );
+        customerDto.setFirstName( customer.getFirstName() );
+        customerDto.setLastName( customer.getLastName() );
+        customerDto.setStatus( customer.getStatus() );
+        customerDto.setNif( customer.getNif() );
+        customerDto.setCardNumber( customer.getCardNumber() );
 
         return customerDto;
     }

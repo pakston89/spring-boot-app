@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 /**
- * The customer controller class.
+ * The Customer controller class.
  * @author pause
  */
 @RestController
