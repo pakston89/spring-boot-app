@@ -1,52 +1,24 @@
-package com.springbootapp.model;
-
-import com.springbootapp.util.TableNames;
-import javax.persistence.*;
+package com.springbootapp.dto;
 
 /**
- * The Park entity class.
+ * The Customer dto class.
  * @author pause
  */
-@Entity
-@Table(name = TableNames.PARKS)
-public class Park {
+public class ParkDto {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
     private Integer id;
 
-    @Column(name = "customer_id")
     private Integer customerId;
 
-    @Column(name = "customer_idp")
     private Long customerIdp;
 
-    @Column(name = "parking_id")
     private Integer parkingId;
 
-    @Column(name = "parking_lot_id")
     private Integer parkingLotId;
 
-    @Column(name = "start_date")
     private Long startDate;
 
-    @Column(name = "end_date")
     private Long endDate;
-
-    public Park() {
-
-    }
-
-    public Park(Integer id, Integer customerId, Long customerIdp, Integer parkingId, Integer parkingLotId, Long startDate, Long endDate) {
-        this.id = id;
-        this.customerId = customerId;
-        this.customerIdp = customerIdp;
-        this.parkingId = parkingId;
-        this.parkingLotId = parkingLotId;
-        this.startDate = startDate;
-        this.endDate = endDate;
-    }
 
     public Integer getId() {
         return id;
@@ -102,18 +74,5 @@ public class Park {
 
     public void setEndDate(Long endDate) {
         this.endDate = endDate;
-    }
-
-    @Override
-    public String toString() {
-        return "Park{" +
-                "id=" + id +
-                ", customerId=" + customerId +
-                ", customerIdp=" + customerIdp +
-                ", parkingId=" + parkingId +
-                ", parkingLotId=" + parkingLotId +
-                ", startDate=" + startDate +
-                ", endDate=" + endDate +
-                '}';
     }
 }

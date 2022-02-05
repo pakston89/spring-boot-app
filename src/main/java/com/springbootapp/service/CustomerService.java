@@ -1,6 +1,7 @@
 package com.springbootapp.service;
 
 import com.springbootapp.model.Customer;
+
 import java.util.List;
 
 /**
@@ -13,5 +14,5 @@ public interface CustomerService {
 
     public Customer getCustomerById(Integer id);
 
-    public void addCustomer(Customer customer);
+    public void saveCustomer(Customer customer);
 }

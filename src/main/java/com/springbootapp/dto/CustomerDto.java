@@ -22,16 +22,6 @@ public class CustomerDto {
 
     private Long cardNumber;
 
-    public CustomerDto(Integer id, Long idp, String firstName, String lastName, CustomerStatus status, String nif, Long cardNumber) {
-        this.id = id;
-        this.idp = idp;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.status = status;
-        this.nif = nif;
-        this.cardNumber = cardNumber;
-    }
-
     public Integer getId() {
         return id;
     }

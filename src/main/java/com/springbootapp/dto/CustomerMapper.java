@@ -5,7 +5,7 @@ import org.mapstruct.Mapper;
 import java.util.List;
 
 /**
- * The Customer mapper class.
+ * The Customer mapper interface.
  * ComponentModel = "spring" produces a bean to inject it anywhere.
  * @author pause
  */
