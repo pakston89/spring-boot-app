@@ -14,10 +14,12 @@ import java.util.List;
 public interface ParkMapper {
 
     ParkGetDto parkToParkGetDto(Park park);
+
     List<ParkGetDto> parksToParksGetDto(List<Park> parks);
+
     Park parkGetDtoToPark(ParkGetDto parkGetDto);
 
     ParkPostDto parkToParkPostDto(Park park);
-    List<ParkPostDto> parksToParksPostDto(List<Park> parks);
+
     Park parkPostDtoToPark(ParkPostDto parkPostDto);
 }

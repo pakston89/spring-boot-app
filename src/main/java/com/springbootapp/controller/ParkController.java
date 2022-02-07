@@ -34,7 +34,7 @@ public class ParkController {
 
     @PostMapping("/savePark")
     public void savePark(ParkPostDto parkPostDto) {
-        LoggerConstants.ParkControllerLog.info("getAllParks -- Params: " + "parkPostDto");
+        LoggerConstants.ParkControllerLog.info("savePark -- Params: " + parkPostDto.toString());
         parkService.savePark(parkMapper.parkPostDtoToPark(parkPostDto));
     }
 }

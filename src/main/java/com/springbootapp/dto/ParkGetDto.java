@@ -1,7 +1,7 @@
 package com.springbootapp.dto;
 
 /**
- * The Park dto class.
+ * The ParkGet dto class.
  * @author pause
  */
 public class ParkGetDto {
