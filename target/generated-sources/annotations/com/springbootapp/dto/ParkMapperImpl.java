@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2022-02-07T17:30:21+0100",
+    date = "2022-02-07T20:47:43+0100",
     comments = "version: 1.4.1.Final, compiler: javac, environment: Java 11.0.11 (Oracle Corporation)"
 )
 @Component
@@ -81,20 +81,6 @@ public class ParkMapperImpl implements ParkMapper {
         parkPostDto.setParkingLotId( park.getParkingLotId() );
 
         return parkPostDto;
-    }
-
-    @Override
-    public List<ParkPostDto> parksToParksPostDto(List<Park> parks) {
-        if ( parks == null ) {
-            return null;
-        }
-
-        List<ParkPostDto> list = new ArrayList<ParkPostDto>( parks.size() );
-        for ( Park park : parks ) {
-            list.add( parkToParkPostDto( park ) );
-        }
-
-        return list;
     }
 
     @Override
