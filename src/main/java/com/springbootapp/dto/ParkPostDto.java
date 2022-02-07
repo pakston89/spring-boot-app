@@ -4,7 +4,7 @@ package com.springbootapp.dto;
  * The Park dto class.
  * @author pause
  */
-public class ParkDto {
+public class ParkPostDto {
 
     private Integer id;
 
@@ -15,10 +15,6 @@ public class ParkDto {
     private Integer parkingId;
 
     private Integer parkingLotId;
-
-    private Long startDate;
-
-    private Long endDate;
 
     public Integer getId() {
         return id;
@@ -60,19 +56,14 @@ public class ParkDto {
         this.parkingLotId = parkingLotId;
     }
 
-    public Long getStartDate() {
-        return startDate;
-    }
-
-    public void setStartDate(Long startDate) {
-        this.startDate = startDate;
-    }
-
-    public Long getEndDate() {
-        return endDate;
-    }
-
-    public void setEndDate(Long endDate) {
-        this.endDate = endDate;
+    @Override
+    public String toString() {
+        return "ParkPostDto{" +
+                "id=" + id +
+                ", customerId=" + customerId +
+                ", customerIdp=" + customerIdp +
+                ", parkingId=" + parkingId +
+                ", parkingLotId=" + parkingLotId +
+                '}';
     }
 }

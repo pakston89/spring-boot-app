@@ -1,6 +1,5 @@
 package com.springbootapp.dto;
 
-import com.springbootapp.model.Customer;
 import com.springbootapp.model.Park;
 import org.mapstruct.Mapper;
 
@@ -14,9 +13,11 @@ import java.util.List;
 @Mapper(componentModel = "spring")
 public interface ParkMapper {
 
-    ParkDto parkToParkDto(Park park);
+    ParkGetDto parkToParkGetDto(Park park);
+    List<ParkGetDto> parksToParksGetDto(List<Park> parks);
+    Park parkGetDtoToPark(ParkGetDto parkGetDto);
 
-    List<ParkDto> parksToParksDto(List<Park> parks);
-
-    Park parkDtoToPark(ParkDto parkDto);
+    ParkPostDto parkToParkPostDto(Park park);
+    List<ParkPostDto> parksToParksPostDto(List<Park> parks);
+    Park parkPostDtoToPark(ParkPostDto parkPostDto);
 }

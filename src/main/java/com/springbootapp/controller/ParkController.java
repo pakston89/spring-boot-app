@@ -1,7 +1,8 @@
 package com.springbootapp.controller;
 
-import com.springbootapp.dto.ParkDto;
+import com.springbootapp.dto.ParkGetDto;
 import com.springbootapp.dto.ParkMapper;
+import com.springbootapp.dto.ParkPostDto;
 import com.springbootapp.service.ParkService;
 import com.springbootapp.util.LoggerConstants;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,14 +27,14 @@ public class ParkController {
     private ParkMapper parkMapper;
 
     @GetMapping("/getAllParks")
-    public List<ParkDto> getAll() {
+    public List<ParkGetDto> getAll() {
         LoggerConstants.ParkControllerLog.info("getAllParks -- Params: " + "none");
-        return parkMapper.parksToParksDto(parkService.getAll());
+        return parkMapper.parksToParksGetDto(parkService.getAll());
     }
 
     @PostMapping("/savePark")
-    public void savePark(ParkDto parkDto) {
-        LoggerConstants.ParkControllerLog.info("getAllParks -- Params: " + "park");
-        parkService.savePark(parkMapper.parkDtoToPark(parkDto));
+    public void savePark(ParkPostDto parkPostDto) {
+        LoggerConstants.ParkControllerLog.info("getAllParks -- Params: " + "parkPostDto");
+        parkService.savePark(parkMapper.parkPostDtoToPark(parkPostDto));
     }
 }
