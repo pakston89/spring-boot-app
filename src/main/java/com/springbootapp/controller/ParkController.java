@@ -6,10 +6,8 @@ import com.springbootapp.dto.ParkPostDto;
 import com.springbootapp.service.ParkService;
 import com.springbootapp.util.LoggerConstants;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
 import java.util.List;
 
 /**
@@ -33,7 +31,7 @@ public class ParkController {
     }
 
     @PostMapping("/savePark")
-    public void savePark(ParkPostDto parkPostDto) {
+    public void savePark(@RequestBody ParkPostDto parkPostDto) {
         LoggerConstants.ParkControllerLog.info("savePark -- Params: " + parkPostDto.toString());
         parkService.savePark(parkMapper.parkPostDtoToPark(parkPostDto));
     }
