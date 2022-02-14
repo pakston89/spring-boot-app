@@ -5,15 +5,14 @@ C:\Users\pause\Desktop\Dev\Java\spring-boot-app\src\main\java\com\springbootapp\
 C:\Users\pause\Desktop\Dev\Java\spring-boot-app\src\main\java\com\springbootapp\service\ParkService.java
 C:\Users\pause\Desktop\Dev\Java\spring-boot-app\src\main\java\com\springbootapp\controller\CustomerController.java
 C:\Users\pause\Desktop\Dev\Java\spring-boot-app\src\main\java\com\springbootapp\repository\CustomerRepository.java
+C:\Users\pause\Desktop\Dev\Java\spring-boot-app\src\main\java\com\springbootapp\dto\ParkDto.java
 C:\Users\pause\Desktop\Dev\Java\spring-boot-app\src\main\java\com\springbootapp\model\Customer.java
 C:\Users\pause\Desktop\Dev\Java\spring-boot-app\src\main\java\com\springbootapp\util\LoggerConstants.java
 C:\Users\pause\Desktop\Dev\Java\spring-boot-app\src\main\java\com\springbootapp\dto\CustomerMapper.java
 C:\Users\pause\Desktop\Dev\Java\spring-boot-app\src\main\java\com\springbootapp\util\TableNames.java
-C:\Users\pause\Desktop\Dev\Java\spring-boot-app\src\main\java\com\springbootapp\dto\ParkPostDto.java
 C:\Users\pause\Desktop\Dev\Java\spring-boot-app\src\main\java\com\springbootapp\service\CustomerServiceImpl.java
 C:\Users\pause\Desktop\Dev\Java\spring-boot-app\src\main\java\com\springbootapp\SpringBootAppApplication.java
 C:\Users\pause\Desktop\Dev\Java\spring-boot-app\src\main\java\com\springbootapp\dto\CustomerDto.java
-C:\Users\pause\Desktop\Dev\Java\spring-boot-app\src\main\java\com\springbootapp\dto\ParkGetDto.java
 C:\Users\pause\Desktop\Dev\Java\spring-boot-app\src\main\java\com\springbootapp\controller\ParkController.java
 C:\Users\pause\Desktop\Dev\Java\spring-boot-app\src\main\java\com\springbootapp\service\CustomerService.java
 C:\Users\pause\Desktop\Dev\Java\spring-boot-app\src\main\java\com\springbootapp\service\ParkServiceImpl.java

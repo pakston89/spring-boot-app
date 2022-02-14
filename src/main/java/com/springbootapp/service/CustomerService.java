@@ -1,5 +1,6 @@
 package com.springbootapp.service;
 
+import com.springbootapp.dto.CustomerDto;
 import com.springbootapp.model.Customer;
 
 import java.util.List;
@@ -10,9 +11,9 @@ import java.util.List;
  */
 public interface CustomerService {
 
-    public List<Customer> getAllCustomers();
+    public List<CustomerDto> getAllCustomers();
 
-    public Customer getCustomerById(Integer id);
+    public CustomerDto getCustomerById(Integer id);
 
-    public void saveCustomer(Customer customer);
+    public void saveCustomer(CustomerDto customerDto);
 }

@@ -8,94 +8,60 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2022-02-07T21:03:39+0100",
+    date = "2022-02-14T19:29:16+0100",
     comments = "version: 1.4.1.Final, compiler: javac, environment: Java 11.0.11 (Oracle Corporation)"
 )
 @Component
 public class ParkMapperImpl implements ParkMapper {
 
     @Override
-    public ParkGetDto parkToParkGetDto(Park park) {
+    public ParkDto parkToParkDto(Park park) {
         if ( park == null ) {
             return null;
         }
 
-        ParkGetDto parkGetDto = new ParkGetDto();
+        ParkDto parkDto = new ParkDto();
 
-        parkGetDto.setId( park.getId() );
-        parkGetDto.setCustomerId( park.getCustomerId() );
-        parkGetDto.setCustomerIdp( park.getCustomerIdp() );
-        parkGetDto.setParkingId( park.getParkingId() );
-        parkGetDto.setParkingLotId( park.getParkingLotId() );
-        parkGetDto.setStartDate( park.getStartDate() );
-        parkGetDto.setEndDate( park.getEndDate() );
+        parkDto.setId( park.getId() );
+        parkDto.setCustomerId( park.getCustomerId() );
+        parkDto.setCustomerIdp( park.getCustomerIdp() );
+        parkDto.setParkingId( park.getParkingId() );
+        parkDto.setParkingLotId( park.getParkingLotId() );
+        parkDto.setStartDate( park.getStartDate() );
+        parkDto.setEndDate( park.getEndDate() );
 
-        return parkGetDto;
+        return parkDto;
     }
 
     @Override
-    public List<ParkGetDto> parksToParksGetDto(List<Park> parks) {
+    public List<ParkDto> parksToParksDto(List<Park> parks) {
         if ( parks == null ) {
             return null;
         }
 
-        List<ParkGetDto> list = new ArrayList<ParkGetDto>( parks.size() );
+        List<ParkDto> list = new ArrayList<ParkDto>( parks.size() );
         for ( Park park : parks ) {
-            list.add( parkToParkGetDto( park ) );
+            list.add( parkToParkDto( park ) );
         }
 
         return list;
     }
 
     @Override
-    public Park parkGetDtoToPark(ParkGetDto parkGetDto) {
-        if ( parkGetDto == null ) {
+    public Park parkDtoToPark(ParkDto parkDto) {
+        if ( parkDto == null ) {
             return null;
         }
 
         Park park = new Park();
 
-        park.setId( parkGetDto.getId() );
-        park.setCustomerId( parkGetDto.getCustomerId() );
-        park.setCustomerIdp( parkGetDto.getCustomerIdp() );
-        park.setParkingId( parkGetDto.getParkingId() );
-        park.setParkingLotId( parkGetDto.getParkingLotId() );
-        park.setStartDate( parkGetDto.getStartDate() );
-        park.setEndDate( parkGetDto.getEndDate() );
-
-        return park;
-    }
-
-    @Override
-    public ParkPostDto parkToParkPostDto(Park park) {
-        if ( park == null ) {
-            return null;
-        }
-
-        ParkPostDto parkPostDto = new ParkPostDto();
-
-        parkPostDto.setId( park.getId() );
-        parkPostDto.setCustomerId( park.getCustomerId() );
-        parkPostDto.setCustomerIdp( park.getCustomerIdp() );
-        parkPostDto.setParkingId( park.getParkingId() );
-        parkPostDto.setParkingLotId( park.getParkingLotId() );
-
-        return parkPostDto;
-    }
-
-    @Override
-    public Park parkPostDtoToPark(ParkPostDto parkPostDto) {
-        if ( parkPostDto == null ) {
-            return null;
-        }
-
-        Park park = new Park();
-
-        park.setId( parkPostDto.getId() );
-        park.setCustomerId( parkPostDto.getCustomerId() );
-        park.setCustomerIdp( parkPostDto.getCustomerIdp() );
-        park.setParkingId( parkPostDto.getParkingId() );
-        park.setParkingLotId( parkPostDto.getParkingLotId() );
+        park.setId( parkDto.getId() );
+        park.setCustomerId( parkDto.getCustomerId() );
+        park.setCustomerIdp( parkDto.getCustomerIdp() );
+        park.setParkingId( parkDto.getParkingId() );
+        park.setParkingLotId( parkDto.getParkingLotId() );
+        park.setStartDate( parkDto.getStartDate() );
+        park.setEndDate( parkDto.getEndDate() );
 
         return park;
     }

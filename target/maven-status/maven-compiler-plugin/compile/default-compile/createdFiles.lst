@@ -2,7 +2,7 @@ com\springbootapp\controller\CustomerController.class
 com\springbootapp\dto\CustomerMapper.class
 com\springbootapp\dto\ParkMapper.class
 com\springbootapp\dto\CustomerDto.class
-com\springbootapp\dto\ParkPostDto.class
+com\springbootapp\dto\ParkDto.class
 com\springbootapp\repository\ParkRepository.class
 com\springbootapp\util\LoggerConstants.class
 com\springbootapp\controller\ParkController.class
@@ -11,7 +11,6 @@ com\springbootapp\util\TableNames.class
 com\springbootapp\enums\CustomerStatus.class
 com\springbootapp\service\ParkService.class
 com\springbootapp\service\ParkServiceImpl.class
-com\springbootapp\dto\ParkGetDto.class
 com\springbootapp\dto\CustomerMapperImpl.class
 com\springbootapp\service\CustomerServiceImpl.class
 com\springbootapp\repository\CustomerRepository.class

@@ -1,5 +1,6 @@
 package com.springbootapp.service;
 
+import com.springbootapp.dto.ParkDto;
 import com.springbootapp.model.Park;
 import java.util.List;
 
@@ -9,7 +10,7 @@ import java.util.List;
  */
 public interface ParkService {
 
-    public List<Park> getAll();
+    public List<ParkDto> getAllParks();
 
-    public void savePark(Park park);
+    public void savePark(ParkDto parkDto);
 }
