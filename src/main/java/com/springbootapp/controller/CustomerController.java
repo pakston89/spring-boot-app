@@ -28,7 +28,7 @@ public class CustomerController {
         return customerMapper.customersToCustomersDto(customerService.getAllCustomers());
     }
 
-    @GetMapping("/customer")
+    @GetMapping("/customerbyid")
     public CustomerDto getCustomerById(@Param("id") Integer id) {
         LoggerConstants.CustomerControllerLog.info("getCustomerById -- Params: " + id);
         return customerMapper.customerToCustomerDto(customerService.getCustomerById(id));
