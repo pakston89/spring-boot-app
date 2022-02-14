@@ -14,6 +14,7 @@ import java.util.List;
  * @author pause
  */
 @RestController
+@RequestMapping("/customers")
 public class CustomerController {
 
     @Autowired
@@ -22,7 +23,7 @@ public class CustomerController {
     @Autowired
     private CustomerMapper customerMapper;
 
-    @GetMapping("/customers")
+    @GetMapping("/allcustomers")
     public List<CustomerDto> getAllCustomers() {
         LoggerConstants.CustomerControllerLog.info("getAllCustomers -- Params: " + "none");
         return customerMapper.customersToCustomersDto(customerService.getAllCustomers());

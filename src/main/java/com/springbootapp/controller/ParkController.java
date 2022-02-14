@@ -15,6 +15,7 @@ import java.util.List;
  * @author pause
  */
 @RestController
+@RequestMapping("/parks")
 public class ParkController {
 
     @Autowired
@@ -23,9 +24,9 @@ public class ParkController {
     @Autowired
     private ParkMapper parkMapper;
 
-    @GetMapping("/parks")
+    @GetMapping("/allparks")
     public List<ParkGetDto> getAll() {
-        LoggerConstants.ParkControllerLog.info("getAllParks -- Params: " + "none");
+        LoggerConstants.ParkControllerLog.info("getAll -- Params: " + "none");
         return parkMapper.parksToParksGetDto(parkService.getAll());
     }
 
