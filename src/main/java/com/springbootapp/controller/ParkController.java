@@ -15,7 +15,6 @@ import java.util.List;
  * @author pause
  */
 @RestController
-@RequestMapping("/park")
 public class ParkController {
 
     @Autowired
@@ -24,13 +23,13 @@ public class ParkController {
     @Autowired
     private ParkMapper parkMapper;
 
-    @GetMapping("/getAllParks")
+    @GetMapping("/parks")
     public List<ParkGetDto> getAll() {
         LoggerConstants.ParkControllerLog.info("getAllParks -- Params: " + "none");
         return parkMapper.parksToParksGetDto(parkService.getAll());
     }
 
-    @PostMapping("/savePark")
+    @PostMapping("/park")
     public void savePark(@RequestBody ParkPostDto parkPostDto) {
         LoggerConstants.ParkControllerLog.info("savePark -- Params: " + parkPostDto.toString());
         parkService.savePark(parkMapper.parkPostDtoToPark(parkPostDto));

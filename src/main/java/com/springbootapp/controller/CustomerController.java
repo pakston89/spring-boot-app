@@ -14,7 +14,6 @@ import java.util.List;
  * @author pause
  */
 @RestController
-@RequestMapping("/customer")
 public class CustomerController {
 
     @Autowired
@@ -23,19 +22,19 @@ public class CustomerController {
     @Autowired
     private CustomerMapper customerMapper;
 
-    @GetMapping("/getAllCustomers")
+    @GetMapping("/customers")
     public List<CustomerDto> getAllCustomers() {
         LoggerConstants.CustomerControllerLog.info("getAllCustomers -- Params: " + "none");
         return customerMapper.customersToCustomersDto(customerService.getAllCustomers());
     }
 
-    @GetMapping("/getCustomerById")
+    @GetMapping("/customer")
     public CustomerDto getCustomerById(@Param("id") Integer id) {
         LoggerConstants.CustomerControllerLog.info("getCustomerById -- Params: " + id);
         return customerMapper.customerToCustomerDto(customerService.getCustomerById(id));
     }
 
-    @PostMapping("/saveCustomer")
+    @PostMapping("/customer")
     public void addCustomer(@RequestBody CustomerDto customerDto) {
         LoggerConstants.CustomerControllerLog.info("addCustomer -- Params: " + customerDto.toString());
         customerService.saveCustomer(customerMapper.customerDtoToCustomer(customerDto));
