@@ -1,7 +1,7 @@
 package com.springbootapp.service;
 
 import com.springbootapp.dto.CustomerDto;
-import com.springbootapp.dto.CustomerMapper;
+import com.springbootapp.dto.mapper.CustomerMapper;
 import com.springbootapp.repository.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -22,16 +22,16 @@ public class CustomerServiceImpl implements CustomerService{
 
     @Override
     public List<CustomerDto> getAllCustomers() {
-        return customerMapper.customersToCustomersDto(customerRepository.getAll());
+        return customerMapper.entitiesToDtos(customerRepository.getAll());
     }
 
     @Override
     public CustomerDto getCustomerById(Integer id) {
-        return customerMapper.customerToCustomerDto(customerRepository.getById(id));
+        return customerMapper.entityToDto(customerRepository.getById(id));
     }
 
     @Override
     public void saveCustomer(CustomerDto customerDto) {
-        customerRepository.save(customerMapper.customerDtoToCustomer(customerDto));
+        customerRepository.save(customerMapper.dtoToEntity(customerDto));
     }
 }

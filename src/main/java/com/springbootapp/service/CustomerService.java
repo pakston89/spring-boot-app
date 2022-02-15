@@ -1,8 +1,6 @@
 package com.springbootapp.service;
 
 import com.springbootapp.dto.CustomerDto;
-import com.springbootapp.model.Customer;
-
 import java.util.List;
 
 /**

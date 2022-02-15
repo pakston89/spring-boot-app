@@ -1,5 +1,6 @@
 package com.springbootapp.dto;
 
+import com.springbootapp.dto.mapper.BaseMapper;
 import com.springbootapp.model.Customer;
 import java.util.ArrayList;
 import java.util.List;
@@ -12,7 +13,7 @@ import org.springframework.stereotype.Component;
     comments = "version: 1.4.1.Final, compiler: javac, environment: Java 11.0.11 (Oracle Corporation)"
 )
 @Component
-public class CustomerMapperImpl implements CustomerMapper {
+public class CustomerMapperImpl implements BaseMapper<> {
 
     @Override
     public CustomerDto customerToCustomerDto(Customer customer) {

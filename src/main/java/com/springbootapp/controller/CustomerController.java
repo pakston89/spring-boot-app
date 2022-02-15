@@ -32,8 +32,8 @@ public class CustomerController {
     }
 
     @PostMapping("/customer")
-    public void addCustomer(@RequestBody CustomerDto customerDto) {
-        LoggerConstants.CustomerControllerLog.info("addCustomer -- Params: " + customerDto.toString());
+    public void saveCustomer(@RequestBody CustomerDto customerDto) {
+        LoggerConstants.CustomerControllerLog.info("saveCustomer -- Params: " + customerDto.toString());
         customerService.saveCustomer(customerDto);
     }
 }
