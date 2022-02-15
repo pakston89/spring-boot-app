@@ -1,6 +1,5 @@
 package com.springbootapp.dto.mapper;
 
-import org.mapstruct.Mapper;
 import java.util.List;
 
 /**
@@ -9,7 +8,6 @@ import java.util.List;
  * @param <Entity>
  * @author pause
  */
-@Mapper
 public interface BaseMapper<Dto,Entity> {
 
     Dto entityToDto(Entity entity);

@@ -1,6 +1,7 @@
 package com.springbootapp.service;
 
 import com.springbootapp.dto.ParkDto;
+import com.springbootapp.dto.mapper.ParkMapper;
 import com.springbootapp.repository.ParkRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -21,14 +22,14 @@ public class ParkServiceImpl implements ParkService {
 
     @Override
     public List<ParkDto> getAllParks() {
-        return parkMapper.parksToParksDto(parkRepository.getAll());
+        return parkMapper.entitiesToDtos(parkRepository.getAll());
     }
 
     @Override
     public void savePark(ParkDto parkDto) {
         parkDto.setStartDate((System.currentTimeMillis() - 7200000) / 1000);
         parkDto.setEndDate(System.currentTimeMillis() / 1000);
-        parkRepository.save(parkMapper.parkDtoToPark(parkDto));
+        parkRepository.save(parkMapper.dtoToEntity(parkDto));
 
     }
 }

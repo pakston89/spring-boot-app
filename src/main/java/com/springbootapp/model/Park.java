@@ -103,17 +103,4 @@ public class Park {
     public void setEndDate(Long endDate) {
         this.endDate = endDate;
     }
-
-    @Override
-    public String toString() {
-        return "Park{" +
-                "id=" + id +
-                ", customerId=" + customerId +
-                ", customerIdp=" + customerIdp +
-                ", parkingId=" + parkingId +
-                ", parkingLotId=" + parkingLotId +
-                ", startDate=" + startDate +
-                ", endDate=" + endDate +
-                '}';
-    }
 }

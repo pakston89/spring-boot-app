@@ -76,5 +76,18 @@ public class CustomerDto {
 
     public void setCardNumber(Long cardNumber) {
         this.cardNumber = cardNumber;
-    }  
+    }
+
+    @Override
+    public String toString() {
+        return "CustomerDto{" +
+                "id=" + id +
+                ", idp=" + idp +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", status=" + status +
+                ", nif='" + nif + '\'' +
+                ", cardNumber=" + cardNumber +
+                '}';
+    }
 }

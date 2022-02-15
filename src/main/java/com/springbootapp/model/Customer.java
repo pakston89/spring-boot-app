@@ -104,17 +104,4 @@ public class Customer {
     public void setCardNumber(Long cardNumber) {
         this.cardNumber = cardNumber;
     }
-
-    @Override
-    public String toString() {
-        return "Customer{" +
-                "id=" + id +
-                ", idp=" + idp +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", status=" + status +
-                ", nif='" + nif + '\'' +
-                ", cardNumber=" + cardNumber +
-                '}';
-    }
 }
