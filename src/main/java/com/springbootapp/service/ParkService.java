@@ -11,5 +11,7 @@ public interface ParkService {
 
     public List<ParkDto> getAllParks();
 
+    public List<ParkDto> getParksByCustomerIdp(Long customerIdp);
+
     public void savePark(ParkDto parkDto);
 }

@@ -26,6 +26,11 @@ public class ParkServiceImpl implements ParkService {
     }
 
     @Override
+    public List<ParkDto> getParksByCustomerIdp(Long customerIdp) {
+        return parkMapper.entitiesToDtos(parkRepository.getParksByCustomerIdp(customerIdp));
+    }
+
+    @Override
     public void savePark(ParkDto parkDto) {
         parkDto.setStartDate((System.currentTimeMillis() - 7200000) / 1000);
         parkDto.setEndDate(System.currentTimeMillis() / 1000);
