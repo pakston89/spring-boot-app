@@ -16,7 +16,7 @@ public interface ParkRepository extends JpaRepository<Park, Integer> {
     @Query(value = "SELECT * FROM parks", nativeQuery = true)
     List<Park> getAll();
 
-    @Query(value = "SELECT * FROM parks WHERE customer_idp=?customerIdp", nativeQuery = true)
+    @Query(value = "SELECT * FROM parks WHERE customer_idp=:customerIdp", nativeQuery = true)
     List<Park> getParksByCustomerIdp(@Param("customerIdp") Long customerIdp);
 
 
