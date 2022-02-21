@@ -1,7 +1,6 @@
 package com.springbootapp.controller;
 
 import com.springbootapp.dto.ParkDto;
-import com.springbootapp.model.Park;
 import com.springbootapp.service.ParkService;
 import com.springbootapp.util.LoggerConstants;
 import org.springframework.beans.factory.annotation.Autowired;

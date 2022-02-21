@@ -34,20 +34,6 @@ public class Park {
     @Column(name = "end_date")
     private Long endDate;
 
-    public Park() {
-
-    }
-
-    public Park(Integer id, Integer customerId, Long customerIdp, Integer parkingId, Integer parkingLotId, Long startDate, Long endDate) {
-        this.id = id;
-        this.customerId = customerId;
-        this.customerIdp = customerIdp;
-        this.parkingId = parkingId;
-        this.parkingLotId = parkingLotId;
-        this.startDate = startDate;
-        this.endDate = endDate;
-    }
-
     public Integer getId() {
         return id;
     }
