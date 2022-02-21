@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.*;
  * @author pause
  */
 @RestController
-@RequestMapping("/parks")
 public class ParkCreateController {
 
     @Autowired

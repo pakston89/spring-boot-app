@@ -11,13 +11,12 @@ import org.springframework.web.bind.annotation.*;
  * @author pause
  */
 @RestController
-@RequestMapping("/register")
 public class CustomerRegisterController {
 
     @Autowired
     private CustomerRegisterService customeRregisterService;
 
-    @PostMapping("/customerregister")
+    @PostMapping("/customer")
     public void registerCustomer(@RequestBody CustomerDto customerDto) {
         LoggerConstants.CustomerControllerLog.info("registerCustomer -- Params: " + customerDto.toString());
         customeRregisterService.createOrUpdate(customerDto);
