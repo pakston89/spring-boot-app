@@ -11,12 +11,13 @@ import org.springframework.web.bind.annotation.*;
  * @author pause
  */
 @RestController
+@RequestMapping("/park")
 public class ParkCreateController {
 
     @Autowired
     private ParkCreateService parkCreateService;
 
-    @PostMapping("/park")
+    @PostMapping
     public void createPark(@RequestBody ParkDto parkDto) {
         LoggerConstants.ParkControllerLog.info("createPark -- Params: " + parkDto.toString());
         parkCreateService.createPark(parkDto);
