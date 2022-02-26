@@ -1,6 +1,6 @@
 package com.springbootapp.controller;
 
-import com.springbootapp.dto.ParkVO;
+import com.springbootapp.model.ParkVO;
 import com.springbootapp.service.ParkService;
 import com.springbootapp.util.LoggerConstants;
 import org.springframework.beans.factory.annotation.Autowired;

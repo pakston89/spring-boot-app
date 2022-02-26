@@ -1,4 +1,4 @@
-package com.springbootapp.dto;
+package com.springbootapp.model;
 
 import com.springbootapp.enums.CustomerStatus;
 

@@ -1,4 +1,4 @@
-package com.springbootapp.dto.mapper;
+package com.springbootapp.model.mapper;
 
 import java.util.List;
 

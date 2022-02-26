@@ -1,6 +1,6 @@
 package com.springbootapp.service;
 
-import com.springbootapp.dto.CustomerVO;
+import com.springbootapp.model.CustomerVO;
 
 public interface CustomerService {
 

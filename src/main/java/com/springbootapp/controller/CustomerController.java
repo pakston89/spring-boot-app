@@ -1,6 +1,6 @@
 package com.springbootapp.controller;
 
-import com.springbootapp.dto.CustomerVO;
+import com.springbootapp.model.CustomerVO;
 import com.springbootapp.service.CustomerService;
 import com.springbootapp.util.LoggerConstants;
 import org.springframework.beans.factory.annotation.Autowired;

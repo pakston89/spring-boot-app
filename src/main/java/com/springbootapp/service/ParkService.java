@@ -1,6 +1,6 @@
 package com.springbootapp.service;
 
-import com.springbootapp.dto.ParkVO;
+import com.springbootapp.model.ParkVO;
 
 public interface ParkService {
 

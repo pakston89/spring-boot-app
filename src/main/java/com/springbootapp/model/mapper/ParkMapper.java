@@ -1,6 +1,6 @@
-package com.springbootapp.dto.mapper;
+package com.springbootapp.model.mapper;
 
-import com.springbootapp.dto.ParkVO;
+import com.springbootapp.model.ParkVO;
 import com.springbootapp.model.Park;
 import org.mapstruct.Mapper;
 

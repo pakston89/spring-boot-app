@@ -1,4 +1,4 @@
-package com.springbootapp.dto;
+package com.springbootapp.model;
 
 public class ParkVO {
 

@@ -1,7 +1,7 @@
 package com.springbootapp.service;
 
-import com.springbootapp.dto.CustomerVO;
-import com.springbootapp.dto.mapper.CustomerMapper;
+import com.springbootapp.model.CustomerVO;
+import com.springbootapp.model.mapper.CustomerMapper;
 import com.springbootapp.model.Customer;
 import com.springbootapp.repository.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
