@@ -7,10 +7,6 @@ import org.springframework.data.repository.query.Param;
 
 import java.util.List;
 
-/**
- * The Park repository interface.
- * @author pause
- */
 public interface ParkRepository extends JpaRepository<Park, Integer> {
 
     @Query(value = "SELECT * FROM parks", nativeQuery = true)

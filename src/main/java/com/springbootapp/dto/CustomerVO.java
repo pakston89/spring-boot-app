@@ -2,11 +2,7 @@ package com.springbootapp.dto;
 
 import com.springbootapp.enums.CustomerStatus;
 
-/**
- * The Customer dto class.
- * @author pause
- */
-public class CustomerDto {
+public class CustomerVO {
 
     private Integer id;
 
@@ -80,7 +76,7 @@ public class CustomerDto {
 
     @Override
     public String toString() {
-        return "CustomerDto{" +
+        return "CustomerVO{" +
                 "id=" + id +
                 ", idp=" + idp +
                 ", firstName='" + firstName + '\'' +

@@ -3,10 +3,6 @@ package com.springbootapp.model;
 import com.springbootapp.util.TableNames;
 import javax.persistence.*;
 
-/**
- * The Park entity class.
- * @author pause
- */
 @Entity
 @Table(name = TableNames.PARKS)
 public class Park {

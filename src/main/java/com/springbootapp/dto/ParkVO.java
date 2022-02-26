@@ -1,10 +1,6 @@
 package com.springbootapp.dto;
 
-/**
- * The Park dto class.
- * @author pause
- */
-public class ParkDto {
+public class ParkVO {
 
     private Integer id;
 
@@ -78,7 +74,7 @@ public class ParkDto {
 
     @Override
     public String toString() {
-        return "ParkDto{" +
+        return "ParkVO{" +
                 "id=" + id +
                 ", customerId=" + customerId +
                 ", customerIdp=" + customerIdp +

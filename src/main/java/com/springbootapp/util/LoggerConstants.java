@@ -1,7 +1,7 @@
 package com.springbootapp.util;
 
-import com.springbootapp.controller.CustomerRegisterController;
-import com.springbootapp.controller.ParkCreateController;
+import com.springbootapp.controller.CustomerController;
+import com.springbootapp.controller.ParkController;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
@@ -11,6 +11,6 @@ import org.apache.commons.logging.LogFactory;
  */
 public class LoggerConstants {
 
-    public static final Log CustomerControllerLog = LogFactory.getLog(CustomerRegisterController.class);
-    public static final Log ParkControllerLog = LogFactory.getLog(ParkCreateController.class);
+    public static final Log CustomerControllerLog = LogFactory.getLog(CustomerController.class);
+    public static final Log ParkControllerLog = LogFactory.getLog(ParkController.class);
 }

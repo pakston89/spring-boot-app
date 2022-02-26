@@ -3,18 +3,17 @@ package com.springbootapp.dto.mapper;
 import java.util.List;
 
 /**
- * The Base mapper interface
- * @param <Dto>
+ * The BaseMapper interface
+ * @param <VO>
  * @param <Entity>
- * @author pause
  */
-public interface BaseMapper<Dto,Entity> {
+public interface BaseMapper<VO,Entity> {
 
-    Dto entityToDto(Entity entity);
+    VO entityToVO(Entity entity);
 
-    Entity dtoToEntity(Dto dto);
+    Entity VOToEntity(VO dto);
 
-    List<Dto> entitiesToDtos(List<Entity> entities);
+    List<VO> entitiesToVOs(List<Entity> entities);
 
-    List<Dto> dtosToEntities(List<Dto> dto);
+    List<VO> VOsToEntities(List<VO> dto);
 }
