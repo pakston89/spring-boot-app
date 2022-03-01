@@ -12,7 +12,7 @@ public class GlobalExceptionHandler {
     @Autowired
     private ErrorMessage errorMessage;
 
-    @ExceptionHandler
+    @ExceptionHandler(IllegalArgumentException.class)
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     public ErrorMessage badRequestExceptionHandler() {
         errorMessage.setErrorCode("400");
@@ -20,7 +20,7 @@ public class GlobalExceptionHandler {
         return errorMessage;
     }
 
-    @ExceptionHandler
+    @ExceptionHandler(NoSuchFieldException.class)
     @ResponseStatus(HttpStatus.NOT_FOUND)
     public ErrorMessage notFoundExceptionHandler() {
         errorMessage.setErrorCode("404");
