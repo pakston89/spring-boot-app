@@ -2,12 +2,12 @@ package com.springbootapp.controller;
 
 import com.springbootapp.model.CustomerVO;
 import com.springbootapp.service.CustomerService;
+import com.springbootapp.util.Logger;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@Log4j2
 @RequestMapping("/customer")
 public class CustomerController {
 
@@ -16,13 +16,13 @@ public class CustomerController {
 
     @GetMapping("/{nif}")
     public CustomerVO getCustomerByNif(@PathVariable String nif) {
-        log.info("getCustomerByNif -- Params: " + nif);
+        Logger.LOGGER.info("getCustomerByNif -- Params: " + nif);
         return customerService.getCustomerByNif(nif);
     }
 
     @PostMapping("/register")
     public void registerCustomer(@RequestBody CustomerVO customerVO) {
-        log.info("registerCustomer -- Params: " + customerVO.toString());
+        Logger.LOGGER.info("registerCustomer -- Params: " + customerVO.toString());
         customerService.createOrUpdate(customerVO);
 
     }
