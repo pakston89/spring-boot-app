@@ -14,6 +14,12 @@ public class CustomerController {
     @Autowired
     private CustomerService customerService;
 
+    @GetMapping("/{nif}")
+    public CustomerVO getCustomerByNif(@PathVariable String nif) {
+        log.info("getCustomerByNif -- Params: " + nif);
+        return customerService.getCustomerByNif(nif);
+    }
+
     @PostMapping("/register")
     public void registerCustomer(@RequestBody CustomerVO customerVO) {
         log.info("registerCustomer -- Params: " + customerVO.toString());

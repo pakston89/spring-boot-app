@@ -16,6 +16,12 @@ public class CustomerServiceImpl implements CustomerService {
     @Autowired
     private CustomerMapper customerMapper;
 
+
+    @Override
+    public CustomerVO getCustomerByNif(String nif) {
+        return customerMapper.entityToVO(customerRepository.getByNif(nif));
+    }
+
     @Override
     public void createOrUpdate(CustomerVO customerVO) {
         Customer customerToUpdate = customerRepository.getByNif(customerVO.getNif());
