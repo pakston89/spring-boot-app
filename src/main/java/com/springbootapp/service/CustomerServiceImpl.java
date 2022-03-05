@@ -1,5 +1,6 @@
 package com.springbootapp.service;
 
+import com.springbootapp.exception.NotFoundException;
 import com.springbootapp.model.CustomerVO;
 import com.springbootapp.model.mapper.CustomerMapper;
 import com.springbootapp.model.Customer;
@@ -59,6 +60,11 @@ public class CustomerServiceImpl implements CustomerService {
 
     @Override
     public void deleteCustomerById(Integer id) {
-        customerRepository.deleteById(id);
+        if(customerRepository.findById(id).isEmpty()) {
+            throw new NotFoundException();
+        }
+        else {
+            customerRepository.deleteById(id);
+        }
     }
 }

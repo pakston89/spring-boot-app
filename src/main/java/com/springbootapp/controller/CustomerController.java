@@ -29,7 +29,7 @@ public class CustomerController {
     }
 
     @DeleteMapping("/{id}")
-    public void deleteCustomerById(@PathVariable Integer id) throws NotFoundException {
+    public void deleteCustomerById(@PathVariable Integer id) {
         Logger.LOGGER.info("deleteCustomerById -- Params: " + id);
         customerService.deleteCustomerById(id);
     }
