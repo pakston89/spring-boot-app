@@ -1,6 +1,7 @@
 package com.springbootapp.exception;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
@@ -12,7 +13,7 @@ public class GlobalExceptionHandler {
     @Autowired
     private ErrorMessage errorMessage;
 
-    @ExceptionHandler(value = NotFoundException.class)
+    @ExceptionHandler(value = EmptyResultDataAccessException.class)
     @ResponseStatus(HttpStatus.NOT_FOUND)
     public ErrorMessage notFoundExceptionHandler(NotFoundException ex) {
         errorMessage.setErrorCode("404");
