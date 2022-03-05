@@ -16,7 +16,6 @@ public class CustomerServiceImpl implements CustomerService {
     @Autowired
     private CustomerMapper customerMapper;
 
-
     @Override
     public CustomerVO getCustomerByNif(String nif) {
         return customerMapper.entityToVO(customerRepository.getByNif(nif));
@@ -56,5 +55,10 @@ public class CustomerServiceImpl implements CustomerService {
 
             customerRepository.saveAndFlush(customerToUpdate);
         }
+    }
+
+    @Override
+    public void deleteCustomerById(Integer id) {
+        customerRepository.deleteCustomerById(id);
     }
 }

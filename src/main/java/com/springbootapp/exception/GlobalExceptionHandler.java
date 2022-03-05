@@ -12,19 +12,11 @@ public class GlobalExceptionHandler {
     @Autowired
     private ErrorMessage errorMessage;
 
-    @ExceptionHandler(IllegalArgumentException.class)
-    @ResponseStatus(HttpStatus.BAD_REQUEST)
-    public ErrorMessage badRequestExceptionHandler() {
-        errorMessage.setErrorCode("400");
-        errorMessage.setMessage("Bad request message");
-        return errorMessage;
-    }
-
-    @ExceptionHandler(NoSuchFieldException.class)
+    @ExceptionHandler(value = NotFoundException.class)
     @ResponseStatus(HttpStatus.NOT_FOUND)
-    public ErrorMessage notFoundExceptionHandler() {
+    public ErrorMessage notFoundExceptionHandler(NotFoundException ex) {
         errorMessage.setErrorCode("404");
-        errorMessage.setMessage("Not found message");
+        errorMessage.setMessage(ex.getMessage() + "eiii");
         return errorMessage;
     }
 }

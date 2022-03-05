@@ -23,6 +23,11 @@ public class CustomerController {
     public void registerCustomer(@RequestBody CustomerVO customerVO) {
         Logger.LOGGER.info("registerCustomer -- Params: " + customerVO.toString());
         customerService.createOrUpdate(customerVO);
+    }
 
+    @DeleteMapping("/{id}")
+    public void deleteCustomerById(@PathVariable Integer id) {
+        Logger.LOGGER.info("deleteCustomerById -- Params: " + id);
+        customerService.deleteCustomerById(id);
     }
 }

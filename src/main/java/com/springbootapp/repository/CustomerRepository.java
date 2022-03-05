@@ -13,4 +13,7 @@ public interface CustomerRepository extends JpaRepository<Customer, Integer> {
 
     @Query(value = "SELECT * FROM customers WHERE nif=:nif", nativeQuery = true)
     Customer getByNif(@Param("nif") String nif);
+
+    @Query(value = "DELETE FROM customers WHERE id=:id", nativeQuery = true)
+    void deleteCustomerById(@Param("id") Integer id);
 }
