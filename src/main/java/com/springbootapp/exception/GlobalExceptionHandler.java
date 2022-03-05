@@ -14,7 +14,7 @@ public class GlobalExceptionHandler {
     private ErrorMessage errorMessage;
 
     @ExceptionHandler(value = EmptyResultDataAccessException.class)
-    @ResponseStatus(HttpStatus.NOT_FOUND)
+    @ResponseStatus(HttpStatus.NO_CONTENT)
     public ErrorMessage notFoundExceptionHandler(NotFoundException ex) {
         errorMessage.setErrorCode("404");
         errorMessage.setMessage(ex.getMessage() + "eiii");
