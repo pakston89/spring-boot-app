@@ -4,17 +4,9 @@ import org.springframework.stereotype.Component;
 
 public class ErrorMessage {
 
-    private String errorCode;
+    private String statusCode;
 
     private String message;
-
-    public String getErrorCode() {
-        return errorCode;
-    }
-
-    public void setErrorCode(String errorCode) {
-        this.errorCode = errorCode;
-    }
 
     public String getMessage() {
         return message;
@@ -22,5 +14,13 @@ public class ErrorMessage {
 
     public void setMessage(String message) {
         this.message = message;
+    }
+
+    public String getStatusCode() {
+        return statusCode;
+    }
+
+    public void setStatusCode(String statusCode) {
+        this.statusCode = statusCode;
     }
 }
