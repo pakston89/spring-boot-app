@@ -4,16 +4,16 @@ import java.util.List;
 
 /**
  * The BaseMapper interface
- * @param <VO>
+ * @param <DTO>
  * @param <Entity>
  */
-public interface BaseMapper<VO,Entity> {
+public interface BaseMapper<DTO,Entity> {
 
-    VO entityToVO(Entity entity);
+    DTO entityToDTO(Entity entity);
 
-    Entity VOToEntity(VO dto);
+    Entity DTOToEntity(DTO dto);
 
-    List<VO> entitiesToVOs(List<Entity> entities);
+    List<DTO> entitiesToDTOs(List<Entity> entities);
 
-    List<VO> VOsToEntities(List<VO> dto);
+    List<DTO> DTOsToEntities(List<DTO> dto);
 }

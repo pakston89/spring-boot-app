@@ -1,6 +1,6 @@
 package com.springbootapp.controller;
 
-import com.springbootapp.model.ParkVO;
+import com.springbootapp.model.ParkDTO;
 import com.springbootapp.service.ParkService;
 import com.springbootapp.util.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,8 +14,8 @@ public class ParkController {
     private ParkService parkService;
 
     @PostMapping
-    public void createPark(@RequestBody ParkVO parkVO) {
-        Logger.LOGGER.info("createPark -- Params: " + parkVO.toString());
-        parkService.createPark(parkVO);
+    public void createPark(@RequestBody ParkDTO parkDTO) {
+        Logger.LOGGER.info("createPark -- Params: " + parkDTO.toString());
+        parkService.createPark(parkDTO);
     }
 }

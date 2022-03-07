@@ -1,6 +1,6 @@
 package com.springbootapp.service;
 
-import com.springbootapp.model.ParkVO;
+import com.springbootapp.model.ParkDTO;
 import com.springbootapp.model.mapper.ParkMapper;
 import com.springbootapp.repository.ParkRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,9 +16,9 @@ public class ParkServiceImpl implements ParkService {
     private ParkMapper parkMapper;
 
     @Override
-    public void createPark(ParkVO parkVO) {
-        parkVO.setStartDate((System.currentTimeMillis() - 7200000) / 1000);
-        parkVO.setEndDate(System.currentTimeMillis() / 1000);
-        parkRepository.saveAndFlush(parkMapper.VOToEntity(parkVO));
+    public void createPark(ParkDTO parkDTO) {
+        parkDTO.setStartDate((System.currentTimeMillis() - 7200000) / 1000);
+        parkDTO.setEndDate(System.currentTimeMillis() / 1000);
+        parkRepository.saveAndFlush(parkMapper.DTOToEntity(parkDTO));
     }
 }

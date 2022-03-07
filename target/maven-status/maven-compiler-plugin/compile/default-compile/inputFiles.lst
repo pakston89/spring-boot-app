@@ -1,4 +1,3 @@
-C:\Users\pause\Desktop\Dev\Java\spring-boot-app\src\main\java\com\springbootapp\model\ParkVO.java
 C:\Users\pause\Desktop\Dev\Java\spring-boot-app\src\main\java\com\springbootapp\enums\CustomerStatus.java
 C:\Users\pause\Desktop\Dev\Java\spring-boot-app\src\main\java\com\springbootapp\model\Park.java
 C:\Users\pause\Desktop\Dev\Java\spring-boot-app\src\main\java\com\springbootapp\repository\ParkRepository.java
@@ -10,12 +9,13 @@ C:\Users\pause\Desktop\Dev\Java\spring-boot-app\src\main\java\com\springbootapp\
 C:\Users\pause\Desktop\Dev\Java\spring-boot-app\src\main\java\com\springbootapp\model\mapper\BaseMapper.java
 C:\Users\pause\Desktop\Dev\Java\spring-boot-app\src\main\java\com\springbootapp\model\Customer.java
 C:\Users\pause\Desktop\Dev\Java\spring-boot-app\src\main\java\com\springbootapp\exception\ErrorMessage.java
-C:\Users\pause\Desktop\Dev\Java\spring-boot-app\src\main\java\com\springbootapp\model\CustomerVO.java
+C:\Users\pause\Desktop\Dev\Java\spring-boot-app\src\main\java\com\springbootapp\model\CustomerDTO.java
 C:\Users\pause\Desktop\Dev\Java\spring-boot-app\src\main\java\com\springbootapp\util\TableNames.java
 C:\Users\pause\Desktop\Dev\Java\spring-boot-app\src\main\java\com\springbootapp\model\mapper\CustomerMapper.java
 C:\Users\pause\Desktop\Dev\Java\spring-boot-app\src\main\java\com\springbootapp\exception\NotFoundException.java
 C:\Users\pause\Desktop\Dev\Java\spring-boot-app\src\main\java\com\springbootapp\service\CustomerServiceImpl.java
 C:\Users\pause\Desktop\Dev\Java\spring-boot-app\src\main\java\com\springbootapp\SpringBootAppApplication.java
+C:\Users\pause\Desktop\Dev\Java\spring-boot-app\src\main\java\com\springbootapp\model\ParkDTO.java
 C:\Users\pause\Desktop\Dev\Java\spring-boot-app\src\main\java\com\springbootapp\model\mapper\ParkMapper.java
 C:\Users\pause\Desktop\Dev\Java\spring-boot-app\src\main\java\com\springbootapp\controller\ParkController.java
 C:\Users\pause\Desktop\Dev\Java\spring-boot-app\src\main\java\com\springbootapp\service\CustomerService.java

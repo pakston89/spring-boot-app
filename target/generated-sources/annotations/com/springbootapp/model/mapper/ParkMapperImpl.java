@@ -1,7 +1,7 @@
 package com.springbootapp.model.mapper;
 
 import com.springbootapp.model.Park;
-import com.springbootapp.model.ParkVO;
+import com.springbootapp.model.ParkDTO;
 import java.util.ArrayList;
 import java.util.List;
 import javax.annotation.processing.Generated;
@@ -9,33 +9,33 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2022-03-05T20:45:36+0100",
+    date = "2022-03-07T21:00:30+0100",
     comments = "version: 1.4.1.Final, compiler: javac, environment: Java 11.0.11 (Oracle Corporation)"
 )
 @Component
 public class ParkMapperImpl implements ParkMapper {
 
     @Override
-    public ParkVO entityToVO(Park entity) {
+    public ParkDTO entityToDTO(Park entity) {
         if ( entity == null ) {
             return null;
         }
 
-        ParkVO parkVO = new ParkVO();
+        ParkDTO parkDTO = new ParkDTO();
 
-        parkVO.setId( entity.getId() );
-        parkVO.setCustomerId( entity.getCustomerId() );
-        parkVO.setCustomerIdp( entity.getCustomerIdp() );
-        parkVO.setParkingId( entity.getParkingId() );
-        parkVO.setParkingLotId( entity.getParkingLotId() );
-        parkVO.setStartDate( entity.getStartDate() );
-        parkVO.setEndDate( entity.getEndDate() );
+        parkDTO.setId( entity.getId() );
+        parkDTO.setCustomerId( entity.getCustomerId() );
+        parkDTO.setCustomerIdp( entity.getCustomerIdp() );
+        parkDTO.setParkingId( entity.getParkingId() );
+        parkDTO.setParkingLotId( entity.getParkingLotId() );
+        parkDTO.setStartDate( entity.getStartDate() );
+        parkDTO.setEndDate( entity.getEndDate() );
 
-        return parkVO;
+        return parkDTO;
     }
 
     @Override
-    public Park VOToEntity(ParkVO dto) {
+    public Park DTOToEntity(ParkDTO dto) {
         if ( dto == null ) {
             return null;
         }
@@ -54,28 +54,28 @@ public class ParkMapperImpl implements ParkMapper {
     }
 
     @Override
-    public List<ParkVO> entitiesToVOs(List<Park> entities) {
+    public List<ParkDTO> entitiesToDTOs(List<Park> entities) {
         if ( entities == null ) {
             return null;
         }
 
-        List<ParkVO> list = new ArrayList<ParkVO>( entities.size() );
+        List<ParkDTO> list = new ArrayList<ParkDTO>( entities.size() );
         for ( Park park : entities ) {
-            list.add( entityToVO( park ) );
+            list.add( entityToDTO( park ) );
         }
 
         return list;
     }
 
     @Override
-    public List<ParkVO> VOsToEntities(List<ParkVO> dto) {
+    public List<ParkDTO> DTOsToEntities(List<ParkDTO> dto) {
         if ( dto == null ) {
             return null;
         }
 
-        List<ParkVO> list = new ArrayList<ParkVO>( dto.size() );
-        for ( ParkVO parkVO : dto ) {
-            list.add( parkVO );
+        List<ParkDTO> list = new ArrayList<ParkDTO>( dto.size() );
+        for ( ParkDTO parkDTO : dto ) {
+            list.add( parkDTO );
         }
 
         return list;

@@ -1,12 +1,12 @@
 package com.springbootapp.service;
 
-import com.springbootapp.model.CustomerVO;
+import com.springbootapp.model.CustomerDTO;
 
 public interface CustomerService {
 
-    public CustomerVO getCustomerByNif(String nif);
+    public CustomerDTO getCustomerByNif(String nif);
 
-    public void createOrUpdate(CustomerVO customerVO);
+    public void createOrUpdate(CustomerDTO customerDTO);
 
     public void deleteCustomerById(Integer id);
 }

@@ -1,6 +1,6 @@
 package com.springbootapp.model;
 
-public class ParkVO {
+public class ParkDTO {
 
     private Integer id;
 
@@ -74,7 +74,7 @@ public class ParkVO {
 
     @Override
     public String toString() {
-        return "ParkVO{" +
+        return "ParkDTO{" +
                 "id=" + id +
                 ", customerId=" + customerId +
                 ", customerIdp=" + customerIdp +

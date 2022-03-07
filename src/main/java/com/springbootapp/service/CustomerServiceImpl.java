@@ -1,7 +1,7 @@
 package com.springbootapp.service;
 
 import com.springbootapp.exception.NotFoundException;
-import com.springbootapp.model.CustomerVO;
+import com.springbootapp.model.CustomerDTO;
 import com.springbootapp.model.mapper.CustomerMapper;
 import com.springbootapp.model.Customer;
 import com.springbootapp.repository.CustomerRepository;
@@ -18,40 +18,40 @@ public class CustomerServiceImpl implements CustomerService {
     private CustomerMapper customerMapper;
 
     @Override
-    public CustomerVO getCustomerByNif(String nif) {
-        return customerMapper.entityToVO(customerRepository.getByNif(nif));
+    public CustomerDTO getCustomerByNif(String nif) {
+        return customerMapper.entityToDTO(customerRepository.getByNif(nif));
     }
 
     @Override
-    public void createOrUpdate(CustomerVO customerVO) {
-        Customer customerToUpdate = customerRepository.getByNif(customerVO.getNif());
+    public void createOrUpdate(CustomerDTO customerDTO) {
+        Customer customerToUpdate = customerRepository.getByNif(customerDTO.getNif());
 
         if (customerToUpdate == null) {
-            customerRepository.saveAndFlush(customerMapper.VOToEntity(customerVO));
+            customerRepository.saveAndFlush(customerMapper.DTOToEntity(customerDTO));
         }
         else {
-            if (customerVO.getIdp() != null) {
-                customerToUpdate.setIdp(customerVO.getIdp());
+            if (customerDTO.getIdp() != null) {
+                customerToUpdate.setIdp(customerDTO.getIdp());
             }
 
-            if (customerVO.getNif() != null) {
-                customerToUpdate.setNif(customerVO.getNif());
+            if (customerDTO.getNif() != null) {
+                customerToUpdate.setNif(customerDTO.getNif());
             }
 
-            if (customerVO.getFirstName() != null) {
-                customerToUpdate.setFirstName(customerVO.getFirstName());
+            if (customerDTO.getFirstName() != null) {
+                customerToUpdate.setFirstName(customerDTO.getFirstName());
             }
 
-            if (customerVO.getLastName() != null) {
-                customerToUpdate.setLastName(customerVO.getLastName());
+            if (customerDTO.getLastName() != null) {
+                customerToUpdate.setLastName(customerDTO.getLastName());
             }
 
-            if (customerVO.getStatus() != null) {
-                customerToUpdate.setStatus(customerVO.getStatus());
+            if (customerDTO.getStatus() != null) {
+                customerToUpdate.setStatus(customerDTO.getStatus());
             }
 
-            if (customerVO.getCardNumber() != null) {
-                customerToUpdate.setCardNumber(customerVO.getCardNumber());
+            if (customerDTO.getCardNumber() != null) {
+                customerToUpdate.setCardNumber(customerDTO.getCardNumber());
             }
 
             customerRepository.saveAndFlush(customerToUpdate);

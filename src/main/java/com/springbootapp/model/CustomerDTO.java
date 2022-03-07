@@ -2,7 +2,7 @@ package com.springbootapp.model;
 
 import com.springbootapp.enums.CustomerStatus;
 
-public class CustomerVO {
+public class CustomerDTO {
 
     private Integer id;
 
@@ -76,7 +76,7 @@ public class CustomerVO {
 
     @Override
     public String toString() {
-        return "CustomerVO{" +
+        return "CustomerDTO{" +
                 "id=" + id +
                 ", idp=" + idp +
                 ", firstName='" + firstName + '\'' +

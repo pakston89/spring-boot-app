@@ -1,6 +1,6 @@
 package com.springbootapp.model.mapper;
 
-import com.springbootapp.model.ParkVO;
+import com.springbootapp.model.ParkDTO;
 import com.springbootapp.model.Park;
 import org.mapstruct.Mapper;
 
@@ -9,5 +9,5 @@ import org.mapstruct.Mapper;
  * @author pause
  */
 @Mapper(componentModel = "spring")
-public interface ParkMapper extends BaseMapper<ParkVO, Park>{
+public interface ParkMapper extends BaseMapper<ParkDTO, Park>{
 }

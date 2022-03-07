@@ -1,7 +1,7 @@
 package com.springbootapp.model.mapper;
 
 import com.springbootapp.model.Customer;
-import com.springbootapp.model.CustomerVO;
+import com.springbootapp.model.CustomerDTO;
 import java.util.ArrayList;
 import java.util.List;
 import javax.annotation.processing.Generated;
@@ -9,33 +9,33 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2022-03-05T20:45:36+0100",
+    date = "2022-03-07T21:00:30+0100",
     comments = "version: 1.4.1.Final, compiler: javac, environment: Java 11.0.11 (Oracle Corporation)"
 )
 @Component
 public class CustomerMapperImpl implements CustomerMapper {
 
     @Override
-    public CustomerVO entityToVO(Customer entity) {
+    public CustomerDTO entityToDTO(Customer entity) {
         if ( entity == null ) {
             return null;
         }
 
-        CustomerVO customerVO = new CustomerVO();
+        CustomerDTO customerDTO = new CustomerDTO();
 
-        customerVO.setId( entity.getId() );
-        customerVO.setIdp( entity.getIdp() );
-        customerVO.setFirstName( entity.getFirstName() );
-        customerVO.setLastName( entity.getLastName() );
-        customerVO.setStatus( entity.getStatus() );
-        customerVO.setNif( entity.getNif() );
-        customerVO.setCardNumber( entity.getCardNumber() );
+        customerDTO.setId( entity.getId() );
+        customerDTO.setIdp( entity.getIdp() );
+        customerDTO.setFirstName( entity.getFirstName() );
+        customerDTO.setLastName( entity.getLastName() );
+        customerDTO.setStatus( entity.getStatus() );
+        customerDTO.setNif( entity.getNif() );
+        customerDTO.setCardNumber( entity.getCardNumber() );
 
-        return customerVO;
+        return customerDTO;
     }
 
     @Override
-    public Customer VOToEntity(CustomerVO dto) {
+    public Customer DTOToEntity(CustomerDTO dto) {
         if ( dto == null ) {
             return null;
         }
@@ -54,28 +54,28 @@ public class CustomerMapperImpl implements CustomerMapper {
     }
 
     @Override
-    public List<CustomerVO> entitiesToVOs(List<Customer> entities) {
+    public List<CustomerDTO> entitiesToDTOs(List<Customer> entities) {
         if ( entities == null ) {
             return null;
         }
 
-        List<CustomerVO> list = new ArrayList<CustomerVO>( entities.size() );
+        List<CustomerDTO> list = new ArrayList<CustomerDTO>( entities.size() );
         for ( Customer customer : entities ) {
-            list.add( entityToVO( customer ) );
+            list.add( entityToDTO( customer ) );
         }
 
         return list;
     }
 
     @Override
-    public List<CustomerVO> VOsToEntities(List<CustomerVO> dto) {
+    public List<CustomerDTO> DTOsToEntities(List<CustomerDTO> dto) {
         if ( dto == null ) {
             return null;
         }
 
-        List<CustomerVO> list = new ArrayList<CustomerVO>( dto.size() );
-        for ( CustomerVO customerVO : dto ) {
-            list.add( customerVO );
+        List<CustomerDTO> list = new ArrayList<CustomerDTO>( dto.size() );
+        for ( CustomerDTO customerDTO : dto ) {
+            list.add( customerDTO );
         }
 
         return list;
