@@ -8,4 +8,5 @@ public class TableNames {
     
     public static final String CUSTOMERS = "customers";
     public static final String PARKS = "parks";
+    public static final String USERS = "users";
 }

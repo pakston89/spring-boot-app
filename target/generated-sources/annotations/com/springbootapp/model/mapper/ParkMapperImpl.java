@@ -1,7 +1,7 @@
 package com.springbootapp.model.mapper;
 
 import com.springbootapp.model.Park;
-import com.springbootapp.model.ParkDTO;
+import com.springbootapp.model.ParkDto;
 import java.util.ArrayList;
 import java.util.List;
 import javax.annotation.processing.Generated;
@@ -9,33 +9,33 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2022-03-07T21:00:30+0100",
+    date = "2022-04-12T16:15:30+0200",
     comments = "version: 1.4.1.Final, compiler: javac, environment: Java 11.0.11 (Oracle Corporation)"
 )
 @Component
 public class ParkMapperImpl implements ParkMapper {
 
     @Override
-    public ParkDTO entityToDTO(Park entity) {
+    public ParkDto entityToDTO(Park entity) {
         if ( entity == null ) {
             return null;
         }
 
-        ParkDTO parkDTO = new ParkDTO();
+        ParkDto parkDto = new ParkDto();
 
-        parkDTO.setId( entity.getId() );
-        parkDTO.setCustomerId( entity.getCustomerId() );
-        parkDTO.setCustomerIdp( entity.getCustomerIdp() );
-        parkDTO.setParkingId( entity.getParkingId() );
-        parkDTO.setParkingLotId( entity.getParkingLotId() );
-        parkDTO.setStartDate( entity.getStartDate() );
-        parkDTO.setEndDate( entity.getEndDate() );
+        parkDto.setId( entity.getId() );
+        parkDto.setCustomerId( entity.getCustomerId() );
+        parkDto.setCustomerIdp( entity.getCustomerIdp() );
+        parkDto.setParkingId( entity.getParkingId() );
+        parkDto.setParkingLotId( entity.getParkingLotId() );
+        parkDto.setStartDate( entity.getStartDate() );
+        parkDto.setEndDate( entity.getEndDate() );
 
-        return parkDTO;
+        return parkDto;
     }
 
     @Override
-    public Park DTOToEntity(ParkDTO dto) {
+    public Park DTOToEntity(ParkDto dto) {
         if ( dto == null ) {
             return null;
         }
@@ -54,12 +54,12 @@ public class ParkMapperImpl implements ParkMapper {
     }
 
     @Override
-    public List<ParkDTO> entitiesToDTOs(List<Park> entities) {
+    public List<ParkDto> entitiesToDTOs(List<Park> entities) {
         if ( entities == null ) {
             return null;
         }
 
-        List<ParkDTO> list = new ArrayList<ParkDTO>( entities.size() );
+        List<ParkDto> list = new ArrayList<ParkDto>( entities.size() );
         for ( Park park : entities ) {
             list.add( entityToDTO( park ) );
         }
@@ -68,14 +68,14 @@ public class ParkMapperImpl implements ParkMapper {
     }
 
     @Override
-    public List<ParkDTO> DTOsToEntities(List<ParkDTO> dto) {
+    public List<ParkDto> DTOsToEntities(List<ParkDto> dto) {
         if ( dto == null ) {
             return null;
         }
 
-        List<ParkDTO> list = new ArrayList<ParkDTO>( dto.size() );
-        for ( ParkDTO parkDTO : dto ) {
-            list.add( parkDTO );
+        List<ParkDto> list = new ArrayList<ParkDto>( dto.size() );
+        for ( ParkDto parkDto : dto ) {
+            list.add( parkDto );
         }
 
         return list;

@@ -1,7 +1,7 @@
 package com.springbootapp.model.mapper;
 
 import com.springbootapp.model.Customer;
-import com.springbootapp.model.CustomerDTO;
+import com.springbootapp.model.CustomerDto;
 import java.util.ArrayList;
 import java.util.List;
 import javax.annotation.processing.Generated;
@@ -9,33 +9,33 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2022-03-07T21:00:30+0100",
+    date = "2022-04-12T16:15:30+0200",
     comments = "version: 1.4.1.Final, compiler: javac, environment: Java 11.0.11 (Oracle Corporation)"
 )
 @Component
 public class CustomerMapperImpl implements CustomerMapper {
 
     @Override
-    public CustomerDTO entityToDTO(Customer entity) {
+    public CustomerDto entityToDTO(Customer entity) {
         if ( entity == null ) {
             return null;
         }
 
-        CustomerDTO customerDTO = new CustomerDTO();
+        CustomerDto customerDto = new CustomerDto();
 
-        customerDTO.setId( entity.getId() );
-        customerDTO.setIdp( entity.getIdp() );
-        customerDTO.setFirstName( entity.getFirstName() );
-        customerDTO.setLastName( entity.getLastName() );
-        customerDTO.setStatus( entity.getStatus() );
-        customerDTO.setNif( entity.getNif() );
-        customerDTO.setCardNumber( entity.getCardNumber() );
+        customerDto.setId( entity.getId() );
+        customerDto.setIdp( entity.getIdp() );
+        customerDto.setFirstName( entity.getFirstName() );
+        customerDto.setLastName( entity.getLastName() );
+        customerDto.setStatus( entity.getStatus() );
+        customerDto.setNif( entity.getNif() );
+        customerDto.setCardNumber( entity.getCardNumber() );
 
-        return customerDTO;
+        return customerDto;
     }
 
     @Override
-    public Customer DTOToEntity(CustomerDTO dto) {
+    public Customer DTOToEntity(CustomerDto dto) {
         if ( dto == null ) {
             return null;
         }
@@ -54,12 +54,12 @@ public class CustomerMapperImpl implements CustomerMapper {
     }
 
     @Override
-    public List<CustomerDTO> entitiesToDTOs(List<Customer> entities) {
+    public List<CustomerDto> entitiesToDTOs(List<Customer> entities) {
         if ( entities == null ) {
             return null;
         }
 
-        List<CustomerDTO> list = new ArrayList<CustomerDTO>( entities.size() );
+        List<CustomerDto> list = new ArrayList<CustomerDto>( entities.size() );
         for ( Customer customer : entities ) {
             list.add( entityToDTO( customer ) );
         }
@@ -68,14 +68,14 @@ public class CustomerMapperImpl implements CustomerMapper {
     }
 
     @Override
-    public List<CustomerDTO> DTOsToEntities(List<CustomerDTO> dto) {
+    public List<CustomerDto> DTOsToEntities(List<CustomerDto> dto) {
         if ( dto == null ) {
             return null;
         }
 
-        List<CustomerDTO> list = new ArrayList<CustomerDTO>( dto.size() );
-        for ( CustomerDTO customerDTO : dto ) {
-            list.add( customerDTO );
+        List<CustomerDto> list = new ArrayList<CustomerDto>( dto.size() );
+        for ( CustomerDto customerDto : dto ) {
+            list.add( customerDto );
         }
 
         return list;

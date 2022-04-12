@@ -1,6 +1,6 @@
 package com.springbootapp.controller;
 
-import com.springbootapp.model.CustomerDTO;
+import com.springbootapp.model.CustomerDto;
 import com.springbootapp.service.CustomerService;
 import com.springbootapp.util.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,13 +14,13 @@ public class CustomerController {
     private CustomerService customerService;
 
     @GetMapping("/{nif}")
-    public CustomerDTO getCustomerByNif(@PathVariable String nif) {
+    public CustomerDto getCustomerByNif(@PathVariable String nif) {
         Logger.LOGGER.info("getCustomerByNif -- Params: " + nif);
         return customerService.getCustomerByNif(nif);
     }
 
     @PostMapping("/register")
-    public void registerCustomer(@RequestBody CustomerDTO customerDTO) {
+    public void registerCustomer(@RequestBody CustomerDto customerDTO) {
         Logger.LOGGER.info("registerCustomer -- Params: " + customerDTO.toString());
         customerService.createOrUpdate(customerDTO);
     }

@@ -1,7 +1,7 @@
 package com.springbootapp.service;
 
 import com.springbootapp.exception.NotFoundException;
-import com.springbootapp.model.CustomerDTO;
+import com.springbootapp.model.CustomerDto;
 import com.springbootapp.model.mapper.CustomerMapper;
 import com.springbootapp.model.Customer;
 import com.springbootapp.repository.CustomerRepository;
@@ -18,12 +18,12 @@ public class CustomerServiceImpl implements CustomerService {
     private CustomerMapper customerMapper;
 
     @Override
-    public CustomerDTO getCustomerByNif(String nif) {
+    public CustomerDto getCustomerByNif(String nif) {
         return customerMapper.entityToDTO(customerRepository.getByNif(nif));
     }
 
     @Override
-    public void createOrUpdate(CustomerDTO customerDTO) {
+    public void createOrUpdate(CustomerDto customerDTO) {
         Customer customerToUpdate = customerRepository.getByNif(customerDTO.getNif());
 
         if (customerToUpdate == null) {
