@@ -26,7 +26,7 @@ public class JwtUtils {
                 .signWith(SignatureAlgorithm.HS512,
                         secretKey.getBytes()).compact();
 
-        return PREFIX + token;
+        return token;
     }
 
 }
