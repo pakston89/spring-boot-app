@@ -13,6 +13,11 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+    @PostMapping("/register")
+    public void register(@RequestBody UserDto userDto) {
+        userService.register(userDto);
+    }
+
     @PostMapping("/login")
     public String login(@RequestBody UserDto userDto) {
         return userService.login(userDto);

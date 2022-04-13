@@ -15,4 +15,12 @@ public class GlobalExceptionHandler {
         errorMessage.setMessage(ex.getMessage());
         return new ResponseEntity<>(errorMessage, HttpStatus.NOT_FOUND);
     }
+
+    @ExceptionHandler(value = AlreadyExistsException.class)
+    public ResponseEntity<ErrorMessage> alReadyExistsException(AlreadyExistsException ex) {
+        ErrorMessage errorMessage = new ErrorMessage();
+        errorMessage.setStatusCode("400");
+        errorMessage.setMessage(ex.getMessage());
+        return new ResponseEntity<>(errorMessage, HttpStatus.BAD_REQUEST);
+    }
 }
