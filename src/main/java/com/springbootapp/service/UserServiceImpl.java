@@ -23,6 +23,8 @@ public class UserServiceImpl implements UserService{
     @Autowired
     private BCryptPasswordEncoder bCrypt;
 
+    private static final String PREFIX = "Bearer ";
+
     @Override
     public void register(UserDto userDto) {
 
@@ -49,7 +51,7 @@ public class UserServiceImpl implements UserService{
             String token = JwtUtils.generateJwtToken(userDto.getUserName());
             userToUpdate.setToken(token);
             userRepository.saveAndFlush(userToUpdate);
-            return token;
+            return PREFIX + token;
         }
     }
 }
