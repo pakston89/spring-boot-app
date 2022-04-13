@@ -23,8 +23,6 @@ public class UserServiceImpl implements UserService{
 
         User userToUpdate = userRepository.findByUserName(userDto.getUserName());
 
-        String token = JwtUtils.generateJwtToken(userDto.getUserName());
-
         if (userToUpdate == null) {
             throw new NotFoundException("This user name does not exist");
         }
@@ -32,7 +30,8 @@ public class UserServiceImpl implements UserService{
             throw new NotFoundException("This password does not exist");
         }
         else {
-            userToUpdate.setToken(JwtUtils.generateJwtToken(userDto.getUserName()));
+            String token = JwtUtils.generateJwtToken(userDto.getUserName());
+            userToUpdate.setToken(token);
             userRepository.saveAndFlush(userToUpdate);
             return token;
         }

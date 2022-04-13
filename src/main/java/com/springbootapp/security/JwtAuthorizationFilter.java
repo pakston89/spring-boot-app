@@ -16,7 +16,7 @@ import java.util.stream.Collectors;
 
 public class JwtAuthorizationFilter extends OncePerRequestFilter {
 
-    private final String HEADER = "Authorization ";
+    private final String HEADER = "Authorization";
     private final String PREFIX = "Bearer ";
     private final String SECRET = "mySecretKey";
 
