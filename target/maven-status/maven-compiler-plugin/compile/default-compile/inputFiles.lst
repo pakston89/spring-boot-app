@@ -27,6 +27,7 @@ C:\Users\pause\Desktop\Dev\Java\spring-boot-app\src\main\java\com\springbootapp\
 C:\Users\pause\Desktop\Dev\Java\spring-boot-app\src\main\java\com\springbootapp\exception\ErrorMessage.java
 C:\Users\pause\Desktop\Dev\Java\spring-boot-app\src\main\java\com\springbootapp\model\CustomerDto.java
 C:\Users\pause\Desktop\Dev\Java\spring-boot-app\src\main\java\com\springbootapp\util\TableNames.java
+C:\Users\pause\Desktop\Dev\Java\spring-boot-app\src\main\java\com\springbootapp\exception\AlreadyExistsException.java
 C:\Users\pause\Desktop\Dev\Java\spring-boot-app\src\main\java\com\springbootapp\SpringBootAppApplication.java
 C:\Users\pause\Desktop\Dev\Java\spring-boot-app\src\main\java\com\springbootapp\model\ParkDto.java
 C:\Users\pause\Desktop\Dev\Java\spring-boot-app\src\main\java\com\springbootapp\repository\UserRepository.java

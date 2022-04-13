@@ -28,6 +28,7 @@ com\springbootapp\model\User.class
 com\springbootapp\model\UserDto.class
 com\springbootapp\controller\UserController.class
 com\springbootapp\security\JwtUtils.class
+com\springbootapp\exception\AlreadyExistsException.class
 com\springbootapp\exception\NotFoundException.class
 com\springbootapp\model\mapper\CustomerMapperImpl.class
 com\springbootapp\service\CustomerService.class
