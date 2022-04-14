@@ -23,7 +23,7 @@ public class UserController {
     }
 
     @GetMapping()
-    public UserDto getUserByName(@RequestParam String name) {
-        return userService.getUserByName(name);
+    public UserDto getUserByName(@RequestParam String userName) {
+        return userService.getUserByName(userName);
     }
 }

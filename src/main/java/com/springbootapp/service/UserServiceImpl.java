@@ -2,6 +2,7 @@ package com.springbootapp.service;
 
 import com.springbootapp.exception.AlreadyExistsException;
 import com.springbootapp.exception.NotFoundException;
+import com.springbootapp.model.Role;
 import com.springbootapp.model.User;
 import com.springbootapp.model.UserDto;
 import com.springbootapp.model.mapper.UserMapper;
@@ -53,8 +54,10 @@ public class UserServiceImpl implements UserService{
         }
     }
 
-    public UserDto getUserByName(String name) {
-        System.out.println(userRepository.findByUserName(name).getRoles().toString());
-        return userMapper.entityToDTO(userRepository.findByUserName(name));
+    public UserDto getUserByName(String userName) {
+        for (Role role : userRepository.findByUserName(userName).getRoles()) {
+            System.out.println(role.getName());
+        }
+        return userMapper.entityToDTO(userRepository.findByUserName(userName));
     }
 }

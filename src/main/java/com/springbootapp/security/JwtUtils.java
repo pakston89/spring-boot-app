@@ -10,8 +10,6 @@ import java.util.stream.Collectors;
 
 public class JwtUtils {
 
-    private static final String PREFIX = "Bearer ";
-
     public static String generateJwtToken(String userName) {
 
         String secretKey = "mySecretKey";
