@@ -3,8 +3,7 @@ package com.springbootapp.model;
 import com.springbootapp.util.TableNames;
 import javax.persistence.*;
 
-@Entity
-@Table(name = TableNames.PARKS)
+@Entity(name = TableNames.PARKS)
 public class Park {
 
     @Id

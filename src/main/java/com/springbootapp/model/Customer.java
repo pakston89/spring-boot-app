@@ -4,8 +4,7 @@ import com.springbootapp.enums.CustomerStatus;
 import com.springbootapp.util.TableNames;
 import javax.persistence.*;
 
-@Entity
-@Table(name = TableNames.CUSTOMERS)
+@Entity(name = TableNames.CUSTOMERS)
 public class Customer {
 
     @Id
@@ -30,20 +29,6 @@ public class Customer {
 
     @Column(name = "card_number")
     private Long cardNumber;
-
-    public Customer() {
-
-    }
-
-    public Customer(Integer id, Long idp, String firstName, String lastName, CustomerStatus status, String nif, Long cardNumber) {
-        this.id = id;
-        this.idp = idp;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.status = status;
-        this.nif = nif;
-        this.cardNumber = cardNumber;
-    }
 
     public Integer getId() {
         return id;

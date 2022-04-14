@@ -7,4 +7,6 @@ public interface UserService {
     public void register(UserDto userDto);
 
     public String login(UserDto userDto);
+
+    public UserDto getUserByName(String name);
 }

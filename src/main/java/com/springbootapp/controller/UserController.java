@@ -3,11 +3,10 @@ package com.springbootapp.controller;
 import com.springbootapp.model.UserDto;
 import com.springbootapp.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
+@RequestMapping("/user")
 public class UserController {
 
     @Autowired
@@ -21,5 +20,10 @@ public class UserController {
     @PostMapping("/login")
     public String login(@RequestBody UserDto userDto) {
         return userService.login(userDto);
+    }
+
+    @GetMapping()
+    public UserDto getUserByName(@RequestParam String name) {
+        return userService.getUserByName(name);
     }
 }

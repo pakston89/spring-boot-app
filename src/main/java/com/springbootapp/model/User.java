@@ -2,9 +2,10 @@ package com.springbootapp.model;
 
 import com.springbootapp.util.TableNames;
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
-@Entity
-@Table(name = TableNames.USERS)
+@Entity(name = TableNames.USERS)
 public class User {
 
     @Id
@@ -23,6 +24,10 @@ public class User {
 
     @Column(name = "secret_key")
     private String secretKey;
+
+    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @JoinTable(name = "user_role", joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "role_id"))
+    private List<Role>  roles = new ArrayList<>();
 
     public Integer getId() {
         return id;
@@ -54,5 +59,21 @@ public class User {
 
     public void setToken(String token) {
         this.token = token;
+    }
+
+    public String getSecretKey() {
+        return secretKey;
+    }
+
+    public void setSecretKey(String secretKey) {
+        this.secretKey = secretKey;
+    }
+
+    public List<Role> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(List<Role> roles) {
+        this.roles = roles;
     }
 }
