@@ -26,6 +26,7 @@ public class JwtAuthorizationFilter extends OncePerRequestFilter {
         String header = request.getHeader(HEADER);
 
         if(header != null && header.startsWith(PREFIX)) {
+
             String token = request.getHeader(HEADER).replace(PREFIX, "");
             Claims claims = Jwts.parser().setSigningKey(SECRET.getBytes()).parseClaimsJws(token).getBody();
 
