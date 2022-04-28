@@ -23,7 +23,7 @@ public class UserController {
     }
 
     @GetMapping()
-    public UserDto getUserByName(@RequestParam String userName) {
+    public UserDto getUserByName(@PathVariable String userName) {
         return userService.getUserByName(userName);
     }
 }
