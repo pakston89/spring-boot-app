@@ -1,22 +1,36 @@
 package com.springbootapp.security;
 
+import com.springbootapp.model.Role;
+import com.springbootapp.model.User;
+import com.springbootapp.repository.UserRepository;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.AuthorityUtils;
+
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
 
 public class JwtUtils {
 
-    public static String generateJwtToken(String userName) {
+    public static String generateJwtToken(User user) {
 
-        String secretKey = "mySecretKey";
+        String secretKey = "47757575.jdidkycoslwn/kdejdjnd.dedlkdeldkedk95487848kl37dhjbws9jnxbeyowl";
+
+        List<Role> roles = user.getRoles();
+        String roleNames = "";
+
+        for (Role role : roles) {
+            roleNames = roleNames + role.getName() + "," ;
+        }
+
         List<GrantedAuthority> grantedAuthorities = AuthorityUtils
-                .commaSeparatedStringToAuthorityList("ROLE_USER");
+                .commaSeparatedStringToAuthorityList(roleNames);
 
-        String token = Jwts.builder().setId("JWTToken").setSubject(userName).
+        String token = Jwts.builder().setId("JWT").setSubject(user.getUserName()).
                 claim("authorities", grantedAuthorities.stream().map(GrantedAuthority::getAuthority)
                         .collect(Collectors.toList()))
                 .setIssuedAt(new Date(System.currentTimeMillis()))

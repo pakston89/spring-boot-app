@@ -18,9 +18,10 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         http.csrf().disable()
                 .addFilterAfter(new JwtAuthorizationFilter(), UsernamePasswordAuthenticationFilter.class)
                 .authorizeRequests()
-                .antMatchers(HttpMethod.POST, "/user/login").permitAll()
-                .antMatchers(HttpMethod.POST, "/user/register").permitAll()
-                .anyRequest().authenticated();
+                    .antMatchers(HttpMethod.GET, "/user").hasAuthority("ROLE_ADMIN")
+                    .antMatchers(HttpMethod.POST, "/user/login").permitAll()
+                    .antMatchers(HttpMethod.POST, "/user/register").permitAll()
+                    .anyRequest().authenticated();
     }
 
     @Bean

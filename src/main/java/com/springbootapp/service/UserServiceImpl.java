@@ -47,7 +47,8 @@ public class UserServiceImpl implements UserService{
             throw new NotFoundException("This password is not correct");
         }
         else {
-            String token = JwtUtils.generateJwtToken(userDto.getUserName());
+
+            String token = JwtUtils.generateJwtToken(userToUpdate);
             return token;
         }
     }
