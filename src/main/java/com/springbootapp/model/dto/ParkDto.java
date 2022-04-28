@@ -1,4 +1,4 @@
-package com.springbootapp.model;
+package com.springbootapp.model.dto;
 
 public class ParkDto {
 

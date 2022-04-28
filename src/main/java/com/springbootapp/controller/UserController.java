@@ -1,6 +1,6 @@
 package com.springbootapp.controller;
 
-import com.springbootapp.model.UserDto;
+import com.springbootapp.model.dto.UserDto;
 import com.springbootapp.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

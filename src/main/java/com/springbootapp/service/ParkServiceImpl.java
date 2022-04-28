@@ -1,6 +1,6 @@
 package com.springbootapp.service;
 
-import com.springbootapp.model.ParkDto;
+import com.springbootapp.model.dto.ParkDto;
 import com.springbootapp.model.mapper.ParkMapper;
 import com.springbootapp.repository.ParkRepository;
 import org.springframework.beans.factory.annotation.Autowired;

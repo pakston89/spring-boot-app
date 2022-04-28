@@ -1,7 +1,7 @@
 package com.springbootapp.service;
 
 import com.springbootapp.exception.NotFoundException;
-import com.springbootapp.model.CustomerDto;
+import com.springbootapp.model.dto.CustomerDto;
 import com.springbootapp.model.mapper.CustomerMapper;
 import com.springbootapp.model.Customer;
 import com.springbootapp.repository.CustomerRepository;

@@ -1,7 +1,7 @@
 package com.springbootapp.model.mapper;
 
 import com.springbootapp.model.User;
-import com.springbootapp.model.UserDto;
+import com.springbootapp.model.dto.UserDto;
 import java.util.ArrayList;
 import java.util.List;
 import javax.annotation.processing.Generated;

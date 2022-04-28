@@ -1,6 +1,6 @@
 package com.springbootapp.service;
 
-import com.springbootapp.model.UserDto;
+import com.springbootapp.model.dto.UserDto;
 
 public interface UserService {
 

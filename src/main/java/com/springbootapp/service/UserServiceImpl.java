@@ -4,7 +4,7 @@ import com.springbootapp.exception.AlreadyExistsException;
 import com.springbootapp.exception.NotFoundException;
 import com.springbootapp.model.Role;
 import com.springbootapp.model.User;
-import com.springbootapp.model.UserDto;
+import com.springbootapp.model.dto.UserDto;
 import com.springbootapp.model.mapper.UserMapper;
 import com.springbootapp.repository.UserRepository;
 import com.springbootapp.security.JwtUtils;

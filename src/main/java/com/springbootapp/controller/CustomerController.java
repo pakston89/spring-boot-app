@@ -1,6 +1,6 @@
 package com.springbootapp.controller;
 
-import com.springbootapp.model.CustomerDto;
+import com.springbootapp.model.dto.CustomerDto;
 import com.springbootapp.service.CustomerService;
 import com.springbootapp.util.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
