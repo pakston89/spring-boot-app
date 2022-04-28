@@ -38,17 +38,17 @@ public class UserServiceImpl implements UserService{
 
     public String login(UserDto userDto) {
 
-        User userToUpdate = userRepository.findByUserName(userDto.getUserName());
+        User user = userRepository.findByUserName(userDto.getUserName());
 
-        if (userToUpdate == null) {
+        if (user == null) {
             throw new NotFoundException("This user name does not exist");
         }
-        else if (userToUpdate != null && !bCrypt.matches(userDto.getPassword(), userToUpdate.getPassword())) {
+        else if (user != null && !bCrypt.matches(userDto.getPassword(), user.getPassword())) {
             throw new NotFoundException("This password is not correct");
         }
         else {
 
-            String token = JwtUtils.generateJwtToken(userToUpdate);
+            String token = JwtUtils.generateJwtToken(user);
             return token;
         }
     }
