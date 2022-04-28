@@ -48,8 +48,6 @@ public class UserServiceImpl implements UserService{
         }
         else {
             String token = JwtUtils.generateJwtToken(userDto.getUserName());
-            userToUpdate.setToken(token);
-            userRepository.saveAndFlush(userToUpdate);
             return token;
         }
     }

@@ -8,10 +8,6 @@ public class UserDto {
 
     private String password;
 
-    private String token;
-
-    private String secretKey;
-
     public Integer getId() {
         return id;
     }
@@ -36,30 +32,12 @@ public class UserDto {
         this.password = password;
     }
 
-    public String getToken() {
-        return token;
-    }
-
-    public void setToken(String token) {
-        this.token = token;
-    }
-
-    public String getSecretKey() {
-        return secretKey;
-    }
-
-    public void setSecretKey(String secretKey) {
-        this.secretKey = secretKey;
-    }
-
     @Override
     public String toString() {
         return "UserDto{" +
                 "id=" + id +
                 ", userName='" + userName + '\'' +
                 ", password='" + password + '\'' +
-                ", token='" + token + '\'' +
-                ", secretKey='" + secretKey + '\'' +
                 '}';
     }
 }

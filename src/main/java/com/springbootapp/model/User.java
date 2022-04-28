@@ -19,12 +19,6 @@ public class User {
     @Column(name = "password")
     private String password;
 
-    @Column(name = "token")
-    private String token;
-
-    @Column(name = "secret_key")
-    private String secretKey;
-
     @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinTable(name = "user_role", joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "role_id"))
     private List<Role>  roles = new ArrayList<>();
@@ -51,22 +45,6 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    public String getToken() {
-        return token;
-    }
-
-    public void setToken(String token) {
-        this.token = token;
-    }
-
-    public String getSecretKey() {
-        return secretKey;
-    }
-
-    public void setSecretKey(String secretKey) {
-        this.secretKey = secretKey;
     }
 
     public List<Role> getRoles() {
