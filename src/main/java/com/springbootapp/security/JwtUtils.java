@@ -4,6 +4,7 @@ import com.springbootapp.model.Role;
 import com.springbootapp.model.User;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.AuthorityUtils;
 import java.util.Date;
@@ -12,9 +13,10 @@ import java.util.stream.Collectors;
 
 public class JwtUtils {
 
-    public static String generateJwtToken(User user) {
+    @Value("${jwt.secretkey}")
+    private String secretKey;
 
-        String secretKey = "47757575.jdidkycoslwn/kdejdjnd.dedlkdeldkedk95487848kl37dhjbws9jnxbeyowl";
+    public String generateJwtToken(User user) {
 
         List<Role> roles = user.getRoles();
         String roleNames = "";
