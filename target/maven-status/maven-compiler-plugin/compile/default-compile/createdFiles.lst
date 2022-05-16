@@ -1,7 +1,9 @@
+com\springbootapp\model\dto\CustomerDto.class
 com\springbootapp\model\mapper\BaseMapper.class
 com\springbootapp\util\Logger.class
 com\springbootapp\repository\UserRepository.class
 com\springbootapp\repository\ParkRepository.class
+com\springbootapp\model\dto\ParkDto.class
 com\springbootapp\model\mapper\ParkMapper.class
 com\springbootapp\service\ParkService.class
 com\springbootapp\service\UserService.class
@@ -9,11 +11,11 @@ com\springbootapp\service\ParkServiceImpl.class
 com\springbootapp\model\mapper\UserMapper.class
 com\springbootapp\service\UserServiceImpl.class
 com\springbootapp\service\CustomerServiceImpl.class
+com\springbootapp\model\dto\UserDto.class
 com\springbootapp\repository\CustomerRepository.class
 com\springbootapp\security\JwtAuthorizationFilter.class
 com\springbootapp\SpringBootAppApplication.class
 com\springbootapp\controller\CustomerController.class
-com\springbootapp\model\ParkDto.class
 com\springbootapp\exception\GlobalExceptionHandler.class
 com\springbootapp\security\SecurityConfiguration.class
 com\springbootapp\model\mapper\ParkMapperImpl.class
@@ -23,9 +25,7 @@ com\springbootapp\model\mapper\CustomerMapper.class
 com\springbootapp\model\Park.class
 com\springbootapp\util\TableNames.class
 com\springbootapp\enums\CustomerStatus.class
-com\springbootapp\model\CustomerDto.class
 com\springbootapp\model\User.class
-com\springbootapp\model\UserDto.class
 com\springbootapp\controller\UserController.class
 com\springbootapp\security\JwtUtils.class
 com\springbootapp\model\Role.class

@@ -1,7 +1,9 @@
 C:\Users\pause\Desktop\Dev\Java\spring-boot-app\src\main\java\com\springbootapp\enums\CustomerStatus.java
+C:\Users\pause\Desktop\Dev\Java\spring-boot-app\src\main\java\com\springbootapp\model\dto\UserDto.java
 C:\Users\pause\Desktop\Dev\Java\spring-boot-app\src\main\java\com\springbootapp\util\Logger.java
 C:\Users\pause\Desktop\Dev\Java\spring-boot-app\src\main\java\com\springbootapp\model\UserRole.java
 C:\Users\pause\Desktop\Dev\Java\spring-boot-app\src\main\java\com\springbootapp\model\Customer.java
+C:\Users\pause\Desktop\Dev\Java\spring-boot-app\src\main\java\com\springbootapp\model\dto\ParkDto.java
 C:\Users\pause\Desktop\Dev\Java\spring-boot-app\src\main\java\com\springbootapp\model\mapper\CustomerMapper.java
 C:\Users\pause\Desktop\Dev\Java\spring-boot-app\src\main\java\com\springbootapp\exception\NotFoundException.java
 C:\Users\pause\Desktop\Dev\Java\spring-boot-app\src\main\java\com\springbootapp\service\CustomerServiceImpl.java
@@ -19,7 +21,6 @@ C:\Users\pause\Desktop\Dev\Java\spring-boot-app\src\main\java\com\springbootapp\
 C:\Users\pause\Desktop\Dev\Java\spring-boot-app\src\main\java\com\springbootapp\security\JwtAuthorizationFilter.java
 C:\Users\pause\Desktop\Dev\Java\spring-boot-app\src\main\java\com\springbootapp\service\ParkService.java
 C:\Users\pause\Desktop\Dev\Java\spring-boot-app\src\main\java\com\springbootapp\controller\CustomerController.java
-C:\Users\pause\Desktop\Dev\Java\spring-boot-app\src\main\java\com\springbootapp\model\UserDto.java
 C:\Users\pause\Desktop\Dev\Java\spring-boot-app\src\main\java\com\springbootapp\repository\CustomerRepository.java
 C:\Users\pause\Desktop\Dev\Java\spring-boot-app\src\main\java\com\springbootapp\security\SecurityConfiguration.java
 C:\Users\pause\Desktop\Dev\Java\spring-boot-app\src\main\java\com\springbootapp\exception\GlobalExceptionHandler.java
@@ -27,9 +28,8 @@ C:\Users\pause\Desktop\Dev\Java\spring-boot-app\src\main\java\com\springbootapp\
 C:\Users\pause\Desktop\Dev\Java\spring-boot-app\src\main\java\com\springbootapp\service\UserService.java
 C:\Users\pause\Desktop\Dev\Java\spring-boot-app\src\main\java\com\springbootapp\controller\UserController.java
 C:\Users\pause\Desktop\Dev\Java\spring-boot-app\src\main\java\com\springbootapp\exception\ErrorMessage.java
-C:\Users\pause\Desktop\Dev\Java\spring-boot-app\src\main\java\com\springbootapp\model\CustomerDto.java
 C:\Users\pause\Desktop\Dev\Java\spring-boot-app\src\main\java\com\springbootapp\util\TableNames.java
+C:\Users\pause\Desktop\Dev\Java\spring-boot-app\src\main\java\com\springbootapp\model\dto\CustomerDto.java
 C:\Users\pause\Desktop\Dev\Java\spring-boot-app\src\main\java\com\springbootapp\exception\AlreadyExistsException.java
 C:\Users\pause\Desktop\Dev\Java\spring-boot-app\src\main\java\com\springbootapp\SpringBootAppApplication.java
-C:\Users\pause\Desktop\Dev\Java\spring-boot-app\src\main\java\com\springbootapp\model\ParkDto.java
 C:\Users\pause\Desktop\Dev\Java\spring-boot-app\src\main\java\com\springbootapp\repository\UserRepository.java
