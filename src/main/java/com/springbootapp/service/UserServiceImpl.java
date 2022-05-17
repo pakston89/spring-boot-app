@@ -2,7 +2,6 @@ package com.springbootapp.service;
 
 import com.springbootapp.exception.AlreadyExistsException;
 import com.springbootapp.exception.NotFoundException;
-import com.springbootapp.model.Role;
 import com.springbootapp.model.User;
 import com.springbootapp.model.dto.UserDto;
 import com.springbootapp.model.mapper.UserMapper;
@@ -20,6 +19,9 @@ public class UserServiceImpl implements UserService{
 
     @Autowired
     private UserMapper userMapper;
+
+    @Autowired
+    private JwtUtils jwtUtils;
 
     @Autowired
     private BCryptPasswordEncoder bCrypt;
@@ -47,16 +49,13 @@ public class UserServiceImpl implements UserService{
             throw new NotFoundException("This password is not correct");
         }
         else {
-            JwtUtils jwtUtils = new JwtUtils();
+
             String token = jwtUtils.generateJwtToken(user);
             return token;
         }
     }
 
     public UserDto getUserByName(String userName) {
-        for (Role role : userRepository.findByUserName(userName).getRoles()) {
-            System.out.println(role.getName());
-        }
         return userMapper.entityToDTO(userRepository.findByUserName(userName));
     }
 }

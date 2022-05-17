@@ -8,5 +8,5 @@ public interface UserService {
 
     public String login(UserDto userDto);
 
-    public UserDto getUserByName(String name);
+    public UserDto getUserByName(String UserName);
 }
